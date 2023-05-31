@@ -5,3 +5,7 @@ update_checker.py can be used to see if the website where the data was sourced f
 gen_cards.py is the code used to generate a csv file with area codes and relevant info.
 
 anki_import_settings.PNG provides the settings used when importing the csv into Anki. I did have to manually remove one card which Anki erroneously created, but the settings otherwise work perfectly.
+
+
+
+to get images: http://www.usa.com/area-code-map/215.png
