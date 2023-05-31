@@ -9,3 +9,4 @@ anki_import_settings.PNG provides the settings used when importing the csv into 
 
 
 to get images: http://www.usa.com/area-code-map/215.png
+or try: https://m.24timezones.com/static_images/area_codes/215.png
