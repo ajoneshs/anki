@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import genanki
 import csv
 
 area_codes_url = 'https://www.bennetyee.org/ucsd-pages/area.html'
