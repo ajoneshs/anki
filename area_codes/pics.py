@@ -48,17 +48,29 @@ def count_404(start, end):
         # remove later--just for testing
         if area_code == 204 or area_code == "204":
             break
-        
+
         try:
             url = start + area_code + end
             # doesn't solve the problem
-            r = requests.get(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"})
+            # r = requests.get(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"})
+            # version that I think should work
+            r = requests.get(url)
             # status code should be either 404 or 200; something else would be unexpected
             if r.status_code == 404:
                 num404 += 1
             elif r.status_code == 200:
                 num200 += 1
-                urllib.request.urlretrieve(url, "pics/" + type + area_code + ".png")
+                # original which doesn't work
+                # urllib.request.urlretrieve(url, "pics/" + type + area_code + ".png")
+                headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0"}
+                req = urllib.request.Request(url, headers=headers)
+                try:
+                    response = urllib.request.urlopen(req)
+                    with open("pics/" + type + area_code + ".png", 'wb') as f:
+                        f.write(response.read())
+                except Exception as e:
+                    print("error when trying to save image")
+                    print(f"exception is: {e}")
             else:
                 print("Unexpected status code: " + str(r.status_code))
                 unexpected_status_codes.append(f"{area_code} raised error {str(r.status_code)} with url {url}")
