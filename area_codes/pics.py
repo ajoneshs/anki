@@ -58,6 +58,7 @@ def count_404(start, end):
                 print("Unexpected status code: " + str(r.status_code))
                 unexpected_status_codes.append(f"{area_code} raised error {str(r.status_code)} with url {url}")
         except Exception as e:
+            # tz doesn't seem to let me save images
             print("Exception raised: " + str(e))
 
     return num404, num200
