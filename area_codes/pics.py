@@ -95,7 +95,7 @@ def write_img_lists(type, img_list):
     with open(filename, 'w', newline='') as f:
         writer = csv.writer(f)
         for i in img_list:
-            writer.writerow(i)
+            writer.writerow([i])
 
 
 # save file with lists of images successfully saved
