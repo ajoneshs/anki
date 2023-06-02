@@ -31,16 +31,20 @@ url_ending = ".png"
 
 unexpected_status_codes = []
 imgs_saved = 0
+usa_imgs = []
+tz_imgs = []
 
 
-def count_404(start, end):
+# count available images and save them
+def save_imgs(start, end):
     print("beginning to test url: " + start + "..." + end)
 
     global imgs_saved
     num404 = 0
     num200 = 0
 
-    # for naming images stored locally to reflect their source
+    # used for naming images stored locally to reflect their source
+    # types reflect the website names (USA.com and 24TimeZones.com)
     if "usa" in start:
         type = "usa"
     else:
@@ -48,7 +52,7 @@ def count_404(start, end):
 
     for area_code in area_codes:
         # remove later--just for testing
-        if area_code == 204 or area_code == "204":
+        if area_code == 204 or area_code == '204':
             break
 
         try:
@@ -59,13 +63,18 @@ def count_404(start, end):
                 num404 += 1
             elif r.status_code == 200:
                 num200 += 1
-                headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0"}
+                headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0'}
                 req = urllib.request.Request(url, headers=headers)
                 try:
                     response = urllib.request.urlopen(req)
-                    filename = "pics/" + type + area_code + ".png"
+                    # filename ex: data/pics/tz/tz215.png
+                    filename = 'data/pics/' + type + '/' + type + area_code + '.png'
                     with open(filename, 'wb') as f:
                         f.write(response.read())
+                    if type == "usa":
+                        usa_imgs.append(area_code)
+                    else:
+                        tz_imgs.append(area_code)
                     imgs_saved += 1
                 except Exception as e:
                     print("error when trying to save image")
@@ -80,12 +89,27 @@ def count_404(start, end):
     return num404, num200
 
 
-usa404, usa200 = count_404(url1, url_ending)
-tz404, tz200 = count_404(url2, url_ending)
+usa404, usa200 = save_imgs(url1, url_ending)
+tz404, tz200 = save_imgs(url2, url_ending)
 
+
+# write to data/pics/ a list of the images that were successfully saved
+def write_img_lists(type, img_list):
+    filename = 'data/pics/' + type + '.csv'
+    with open(filename, 'w') as f:
+        writer = csv.writer(f)
+        for i in img_list:
+            writer.writerow(i)
+
+
+# save file with lists of images successfully saved
+write_img_lists('usa', usa_imgs)
+write_img_lists('tz', tz_imgs)
+
+
+# stats and error checking
+print(f"total area codes: {len(area_codes)}")
 print(f"usa404: {usa404}; usa200: {usa200}")
 print(f"tz404: {tz404}; tz200: {tz200}")
-print("below should be empty list")
-print(unexpected_status_codes)
-
 print("images saved == total non-404s?: " + str(imgs_saved == (usa200 + tz200)))
+print(f"No unexpected status codes?: " + str(unexpected_status_codes == []))
