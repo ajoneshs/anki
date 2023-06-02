@@ -96,7 +96,7 @@ tz404, tz200 = save_imgs(url2, url_ending)
 # write to data/pics/ a list of the images that were successfully saved
 def write_img_lists(type, img_list):
     filename = 'data/pics/' + type + '.csv'
-    with open(filename, 'w') as f:
+    with open(filename, 'w', newline='') as f:
         writer = csv.writer(f)
         for i in img_list:
             writer.writerow(i)
