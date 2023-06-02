@@ -1,0 +1,827 @@
+front,back,tag
+52 55,"Region: MX
+Mexico: Mexico City area (country code + city code)",MX
+201,"Region: NJ
+N New Jersey: Jersey City, Hackensack (see split 973, overlay 551)",NJ
+202,"Region: DC
+Washington, D.C.",DC
+203,"Region: CT
+Connecticut: Fairfield County and New Haven County; Bridgeport, New Haven (see 860)",CT
+204,"Region: MB
+Canada: Manitoba (see overlay 431)",MB
+205,"Region: AL
+Central Alabama (including Birmingham; excludes the southeastern corner of Alabama and the deep south; see splits 256 and 334)",AL
+206,"Region: WA
+W Washington state: Seattle and Bainbridge Island (see splits 253, 360, 425; overlay 564)",WA
+207,"Region: ME
+Maine",ME
+208,"Region: ID
+Idaho",ID
+209,"Region: CA
+Cent. California: Stockton (see split 559)",CA
+210,"Region: TX
+S Texas: San Antonio (see also splits 830, 956)",TX
+211,"Region: --
+Local community info / referral services",--
+212,"Region: NY
+New York City, New York (Manhattan; see ovelays 332, 646, 917; split 718)",NY
+213,"Region: CA
+S California: Los Angeles (see 310, 323, 626, 818)",CA
+214,"Region: TX
+Texas: Dallas Metro (overlays 469/972)",TX
+215,"Region: PA
+SE Pennsylvania: Philadelphia (see overlays 267)",PA
+216,"Region: OH
+Cleveland (see splits 330, 440)",OH
+217,"Region: IL
+Cent. Illinois: Springfield",IL
+218,"Region: MN
+N Minnesota: Duluth",MN
+219,"Region: IN
+NW Indiana: Gary (see split 574, 260)",IN
+220,"Region: OH
+SE and Central Ohio (outside Columbus; overlaid on 740)",OH
+223,"Region: PA
+E Pennsylvania: Gettysburg, Harrisburg, Lancaster, Lebanan, and York (overlays 223, eff 8/2017)",PA
+224,"Region: IL
+Northern NE Illinois:  Evanston, Waukegan, Northbrook (overlay on 847, eff 1/5/02)",IL
+225,"Region: LA
+Louisiana: Baton Rouge, New Roads, Donaldsonville, Albany, Gonzales, Greensburg, Plaquemine, Vacherie (split from 504)",LA
+226,"Region: ON
+Canada: SW Ontario: Windsor (overlays 519, 548)",ON
+228,"Region: MS
+S Mississippi (coastal areas, Biloxi, Gulfport; split from 601)",MS
+229,"Region: GA
+SW Georgia: Albany (split from 912; see also 478; perm 8/1/00)",GA
+231,"Region: MI
+W Michigan: Northwestern portion of lower Peninsula; Traverse City, Muskegon, Cheboygan, Alanson",MI
+234,"Region: OH
+NE Ohio: Canton, Akron (overlaid on 330; perm 10/30/00)",OH
+236,"Region: BC
+Canada: British Columbia (see 250, 604)",BC
+239,"Region: FL
+Florida (Lee, Collier, and Monroe Counties, excl the Keys; see 305; eff 3/11/02; mand 3/11/03)",FL
+240,"Region: MD
+W Maryland: Silver Spring, Frederick, Gaithersburg (overlay, see 301)",MD
+242,"Region: --
+Bahamas",--
+246,"Region: --
+Barbados",--
+248,"Region: MI
+Michigan: Oakland County, Pontiac (split from 810; see overlay 947)",MI
+250,"Region: BC
+Canada: British Columbia (see 236, 604)",BC
+251,"Region: AL
+S Alabama: Mobile and coastal areas, Jackson, Evergreen, Monroeville (split from 334, eff 6/18/01; see also 205, 256)",AL
+252,"Region: NC
+E North Carolina (Rocky Mount; split from 919)",NC
+253,"Region: WA
+Washington: South Tier - Tacoma, Federal Way (split from 206, see also 425; overlay 564)",WA
+254,"Region: TX
+Central Texas (Waco, Stephenville; split, see 817, 940)",TX
+256,"Region: AL
+E and N Alabama (Huntsville, Florence, Gadsden; split from 205; see also 334)",AL
+260,"Region: IN
+NE Indiana: Fort Wayne (see 219)",IN
+262,"Region: WI
+SE Wisconsin: counties of Kenosha, Ozaukee, Racine, Walworth, Washington, Waukesha (split from 414)",WI
+264,"Region: --
+Anguilla (split from 809)",--
+267,"Region: PA
+SE Pennsylvania: Philadelphia (see 215)",PA
+268,"Region: --
+Antigua and Barbuda (split from 809)",--
+269,"Region: MI
+SW Michigan: Kalamazoo, Saugatuck, Hastings, Battle Creek, Sturgis to Lake Michigan (split from 616)",MI
+270,"Region: KY
+W Kentucky: Bowling Green, Paducah (split from 502)",KY
+272,"Region: PA
+NE and N Central Pennsylvania: Wilkes-Barre, Scranton (see 717; overlaid on 570)",PA
+276,"Region: VA
+S and SW Virginia: Bristol, Stuart, Martinsville (split from 540; perm 9/1/01, mand 3/16/02)",VA
+278,"Region: MI
+Michigan (overlaid on 734, SUSPENDED)",MI
+281,"Region: TX
+Texas: Houston Metro (split 713; overlay 832, 346)",TX
+283,"Region: OH
+SW Ohio: Cincinnati (cancelled: overlaid on 513)",OH
+284,"Region: --
+British Virgin Islands (split from 809)",--
+289,"Region: ON
+Canada: S Cent. Ontario: Greater Toronto Area -- Durham, Halton, Hamilton-Wentworth, Niagara, Peel, York, and southern Simcoe County (excluding Toronto -- overlaid on 905)",ON
+301,"Region: MD
+W Maryland: Silver Spring, Frederick, Camp Springs, Prince George's County (see 240)",MD
+302,"Region: DE
+Delaware",DE
+303,"Region: CO
+Central Colorado: Denver (see 970, also 720 overlay)",CO
+304,"Region: WV
+West Virginia (see overlay 681)",WV
+305,"Region: FL
+SE Florida: Miami, the Keys (see 786, 954; 239)",FL
+306,"Region: SK
+Canada: Saskatchewan (see overlay 639)",SK
+307,"Region: WY
+Wyoming",WY
+308,"Region: NE
+W Nebraska: North Platte",NE
+309,"Region: IL
+W Cent. Illinois: Peoria",IL
+310,"Region: CA
+S California: Beverly Hills, West Hollywood, West Los Angeles (see split 562; overlay 424)",CA
+311,"Region: --
+Reserved for special applications",--
+312,"Region: IL
+Illinois: Chicago (downtown only -- in the loop; see 773; overlay 872)",IL
+313,"Region: MI
+Michigan: Detroit and suburbs (see 734, overlay 679)",MI
+314,"Region: MO
+SE Missouri: St Louis city and parts of the metro area only (see 573, 636, overlay 557)",MO
+315,"Region: NY
+N Cent. New York: Syracuse",NY
+316,"Region: KS
+S Kansas: Wichita (see split 620)",KS
+317,"Region: IN
+Cent. Indiana: Indianapolis (see 765)",IN
+318,"Region: LA
+N Louisiana: Shreveport, Ruston, Monroe, Alexandria (see split 337)",LA
+319,"Region: IA
+E Iowa: Cedar Rapids (see split 563)",IA
+320,"Region: MN
+Cent. Minnesota: Saint Cloud (rural Minn, excl St. Paul/Minneapolis)",MN
+321,"Region: FL
+Florida: Brevard County, Cape Canaveral area; Metro Orlando (split from 407)",FL
+323,"Region: CA
+S California: Los Angeles (outside downtown: Hollywood; split from 213)",CA
+325,"Region: TX
+Central Texas: Abilene, Sweetwater, Snyder, San Angelo (split from 915)",TX
+330,"Region: OH
+NE Ohio: Akron, Canton, Youngstown; Mahoning County, parts of Trumbull/Warren counties (see splits 216, 440, overlay 234)",OH
+331,"Region: IL
+W NE Illinois, western suburbs of Chicago (part of what used to be 708; overlaid on 630; eff 7/07)",IL
+332,"Region: NY
+New York City, New York (Manhattan; overlaid on 212, 646, 917)",NY
+334,"Region: AL
+S Alabama: Auburn/Opelika, Montgomery and coastal areas (part of what used to be 205; see also 256, split 251)",AL
+336,"Region: NC
+Cent. North Carolina: Greensboro, Winston-Salem, High Point (split from 910; see overlay 743)",NC
+337,"Region: LA
+SW Louisiana: Lake Charles, Lafayette (see split 318)",LA
+339,"Region: MA
+Massachusetts: Boston suburbs, to the south and west (see splits 617, 508; overlaid on 781, eff 5/2/01)",MA
+340,"Region: VI
+US Virgin Islands (see also 809)",VI
+341,"Region: CA
+(overlay on 510; SUSPENDED)",CA
+343,"Region: ON
+Canada: SE Ontario: Ottawa (overlaid on 613)",ON
+345,"Region: --
+Cayman Islands",--
+346,"Region: TX
+Mid SE Texas: central Houston (overlaid on 713, 281, and 832)",TX
+347,"Region: NY
+New York City, New York (overlay for 718: NYC area, except Manhattan)",NY
+351,"Region: MA
+Massachusetts: north of Boston to NH, 508, and 781 (overlaid on 978, eff 4/2/01)",MA
+352,"Region: FL
+Florida: Gainesville area, Ocala, Crystal River (split from 904)",FL
+360,"Region: WA
+W Washington State: Olympia, Bellingham (area circling 206, 253, and 425; split from 206; see overlay 564)",WA
+361,"Region: TX
+S Texas: Corpus Christi (split from 512; eff 2/13/99)",TX
+365,"Region: ON
+Canada: S Cent. Ontario: Greater Toronto Area -- Durham, Halton, Hamilton-Wentworth, Niagara, Peel, York, and southern Simcoe County (overlaid on 905)",ON
+369,"Region: CA
+Solano County (perm 12/2/00, mand 6/2/01)",CA
+380,"Region: OH
+Ohio: Columbus (overlaid on 614; assigned but not in use)",OH
+385,"Region: UT
+Utah: Salt Lake City Metro (split from 801, eff 3/30/02 POSTPONED; see also 435)",UT
+386,"Region: FL
+N central Florida: Lake City (split from 904, perm 2/15/01, mand 11/5/01)",FL
+401,"Region: RI
+Rhode Island",RI
+402,"Region: NE
+E Nebraska: Omaha, Lincoln",NE
+403,"Region: AB
+Canada: Southern Alberta (see 587, 780, 825, 867)",AB
+404,"Region: GA
+N Georgia: Atlanta and suburbs (see overlay 678, split 770)",GA
+405,"Region: OK
+W Oklahoma: Oklahoma City (see 580)",OK
+406,"Region: MT
+Montana",MT
+407,"Region: FL
+Central Florida: Metro Orlando (see overlay 689, eff 7/02; split 321)",FL
+408,"Region: CA
+Cent. Coastal California: San Jose (see overlay 669)",CA
+409,"Region: TX
+SE Texas: Galveston, Port Arthur, Beaumont (splits 936, 979)",TX
+410,"Region: MD
+E Maryland: Baltimore, Annapolis, Chesapeake Bay area, Ocean City (see overlays 443, 667)",MD
+411,"Region: --
+Reserved for special applications",--
+412,"Region: PA
+W Pennsylvania: Pittsburgh (see split 724, overlay 878)",PA
+413,"Region: MA
+W Massachusetts: Springfield",MA
+414,"Region: WI
+SE Wisconsin: Milwaukee County (see splits 920, 262)",WI
+415,"Region: CA
+California: San Francisco County and Marin County on the north side of the Golden Gate Bridge, extending north to Sonoma County (see 650 split; 628 overlay, eff 2/2015)",CA
+416,"Region: ON
+Canada: S Cent. Ontario: Toronto (see overlays 437, 647)",ON
+417,"Region: MO
+SW Missouri: Springfield",MO
+418,"Region: QC
+Canada: NE Quebec: Quebec (see overlay 581)",QC
+419,"Region: OH
+NW Ohio: Toledo (see overlay 567, perm 1/1/02)",OH
+423,"Region: TN
+E Tennessee, except Knoxville metro area: Chattanooga, Bristol, Johnson City, Kingsport, Greeneville (see split 865; part of what used to be 615)",TN
+424,"Region: CA
+S California: Los Angeles (see split 562; overlaid on 310 mand 7/26/06)",CA
+425,"Region: WA
+Washington: North Tier - Everett, Bellevue (split from 206, see also 253; overlay 564)",WA
+430,"Region: TX
+NE Texas: Tyler (overlaid on 903, eff 7/20/02)",TX
+431,"Region: MB
+Canada: Manitoba (overlaid on 204; eff 11/12)",MB
+432,"Region: TX
+W Texas: Big Spring, Midland, Odessa (split from 915, eff 4/5/03)",TX
+434,"Region: VA
+E Virginia: Charlottesville, Lynchburg, Danville, South Boston, and Emporia (split from 804, eff 6/1/01; see also 757)",VA
+435,"Region: UT
+Rural Utah outside Salt Lake City metro (see split 801)",UT
+437,"Region: ON
+Canada: S Cent. Ontario: Toronto (overlaid on 416)",ON
+438,"Region: QC
+Canada: SW Quebec: Montreal city (overlaid on 514, [delayed until 6/06] eff 10/10/03, mand 2/7/04)",QC
+440,"Region: OH
+Ohio: Cleveland metro area, excluding Cleveland (split from 216, see also 330)",OH
+441,"Region: --
+Bermuda (part of what used to be 809)",--
+442,"Region: CA
+Far north suburbs of San Diego (Oceanside, Escondido; overlaid on 760)",CA
+443,"Region: MD
+E Maryland: Baltimore, Annapolis, Chesapeake Bay area, Ocean City (overlaid on 410, see overlay 667)",MD
+450,"Region: QC
+Canada: Southeastern Quebec; suburbs outside metro Montreal (see overlay 579)",QC
+456,"Region: --
+Inbound International",--
+458,"Region: OR
+Oregon: Eugene, Medford (overlaid on 541)",OR
+464,"Region: IL
+Illinois: south suburbs of Chicago (see 630; overlaid on 708)",IL
+469,"Region: TX
+Texas: Dallas Metro (overlays 214/972)",TX
+470,"Region: GA
+Georgia: Greater Atlanta Metropolitan Area (overlaid on 404/770/678; mand 9/2/01)",GA
+473,"Region: --
+Grenada (""new"" -- split from 809)",--
+475,"Region: CT
+Connecticut: New Haven, Greenwich, southwestern (postponed; was perm 1/6/01; mand 3/1/01???)",CT
+478,"Region: GA
+Central Georgia: Macon (split from 912; see also 229; perm 8/1/00; mand 8/1/01)",GA
+479,"Region: AR
+NW Arkansas:  Fort Smith, Fayetteville, Springdale, Bentonville (SPLIt from 501, perm 1/19/02, mand 7/20/02)",AR
+480,"Region: AZ
+Arizona: East Phoenix (see 520; also Phoenix split 602, 623)",AZ
+481,"Region: QC
+Canada: NE Quebec: Quebec (see overlay 418)",QC
+484,"Region: PA
+SE Pennsylvania: Allentown, Bethlehem, Reading, West Chester, Norristown (see 610)",PA
+500,"Region: --
+Personal Communication Service",--
+501,"Region: AR
+Central Arkansas: Little Rock, Hot Springs, Conway (see split 479)",AR
+502,"Region: KY
+N Central Kentucky: Louisville (see 270)",KY
+503,"Region: OR
+Oregon (see 458, 541, 971)",OR
+504,"Region: LA
+E Louisiana: New Orleans metro area (see splits 225, 985)",LA
+505,"Region: NM
+North central and northwestern New Mexico (Albuquerque, Santa Fe, Los Alamos; see split 575, eff 10/07/07)",NM
+506,"Region: NB
+Canada: New Brunswick",NB
+507,"Region: MN
+S Minnesota: Rochester, Mankato, Worthington",MN
+508,"Region: MA
+Cent. Massachusetts: Framingham; Cape Cod (see split 978, overlay 774)",MA
+509,"Region: WA
+E and Central Washington state: Spokane, Yakima, Walla Walla, Ellensburg",WA
+510,"Region: CA
+California: Oakland, East Bay (see 925)",CA
+511,"Region: --
+Nationwide travel information",--
+512,"Region: TX
+S Texas: Austin (see split 361; overlay 737, perm 11/10/01)",TX
+513,"Region: OH
+SW Ohio: Cincinnati (see split 937; overlay 283 cancelled)",OH
+514,"Region: QC
+Canada: SW Quebec: Montreal city (see overlay 438, eff 10/10/03, mand 2/7/04)",QC
+515,"Region: IA
+Cent. Iowa: Des Moines (see split 641)",IA
+516,"Region: NY
+New York: Nassau County, Long Island; Hempstead (see split 631)",NY
+517,"Region: MI
+Cent. Michigan: Lansing (see split 989)",MI
+518,"Region: NY
+NE New York: Albany",NY
+519,"Region: ON
+Canada: SW Ontario: Windsor (see overlay 226, 548)",ON
+520,"Region: AZ
+SE Arizona: Tucson area (split from 602; see split 928)",AZ
+530,"Region: CA
+NE California: Eldorado County area, excluding Eldorado Hills itself: incl cities of Auburn, Chico, Redding, So. Lake Tahoe, Marysville, Nevada City/Grass Valley (split from 916)",CA
+539,"Region: OK
+E Oklahoma: Tulsa area (overlaid on 918)",OK
+540,"Region: VA
+Western and Southwest Virginia: Shenandoah and Roanoke valleys: Fredericksburg, Harrisonburg, Roanoke, Salem, Lexington and nearby areas (see split 276; split from 703)",VA
+541,"Region: OR
+Oregon: Eugene, Medford (split from 503; 503 retains NW part [Portland/Salem], all else moves to 541; eastern oregon is UTC-7).  Also serves small part of northern California (NE corner of Del Norte County).  (See overlay 458.)",OR
+548,"Region: ON
+Canada: Southwestern Ontario (London, Sarnia, Kitchener-Waterloo and Brantford; overlaid on 226, 519)",ON
+551,"Region: NJ
+N New Jersey: Jersey City, Hackensack (overlaid on 201)",NJ
+555,"Region: --
+Reserved for directory assistance applications",--
+557,"Region: MO
+SE Missouri: St Louis metro area only (cancelled: overlaid on 314)",MO
+559,"Region: CA
+Central California: Fresno (split from 209)",CA
+561,"Region: FL
+S. Central Florida: Palm Beach County (West Palm Beach, Boca Raton, Vero Beach; see split 772, eff 2/11/02; mand 11/11/02)",FL
+562,"Region: CA
+California: Long Beach (split from 310 Los Angeles)",CA
+563,"Region: IA
+E Iowa: Davenport, Dubuque (split from 319, eff 3/25/01)",IA
+564,"Region: WA
+W Washington State: Olympia, Bellingham (overlaid on 360; see also 206, 253, 425; assigned but not in use)",WA
+567,"Region: OH
+NW Ohio: Toledo (overlaid on 419, perm 1/1/02)",OH
+570,"Region: PA
+NE and N Central Pennsylvania: Wilkes-Barre, Scranton (see 717; see overlay 272)",PA
+571,"Region: VA
+Northern Virginia: Arlington, McLean, Tysons Corner (to be overlaid on 703 3/1/00; see earlier split 540)",VA
+573,"Region: MO
+SE Missouri: excluding St Louis metro area, includes Central/East Missouri, area between St. Louis and Kansas City",MO
+574,"Region: IN
+N Indiana: Elkhart, South Bend (split from 219)",IN
+575,"Region: NM
+New Mexico (Las Cruces, Alamogordo, Roswell; split from 505, eff 10/07/07)",NM
+579,"Region: QC
+Canada: Southeastern Quebec; suburbs outside metro Montreal (overlaid on 450)",QC
+580,"Region: OK
+W Oklahoma (rural areas outside Oklahoma City; split from 405)",OK
+581,"Region: QC
+Canada: NE Quebec: Quebec (overlaid on 418)",QC
+585,"Region: NY
+NW New York: Rochester (split from 716)",NY
+586,"Region: MI
+Michigan: Macomb County (split from 810; perm 9/22/01, mand 3/23/02)",MI
+587,"Region: AB
+Canada: Alberta (see 403, 780, 825)",AB
+600,"Region: --
+Canadian Services",--
+601,"Region: MS
+Mississippi: Meridian, Jackson area (see splits 228, 662; overlay 769)",MS
+602,"Region: AZ
+Arizona: Phoenix (see 520; also Phoenix split 480, 623)",AZ
+603,"Region: NH
+New Hampshire",NH
+604,"Region: BC
+Canada: British Columbia: Greater Vancouver (overlay 778, perm 11/3/01; see 250)",BC
+605,"Region: SD
+South Dakota",SD
+606,"Region: KY
+E Kentucky: area east of Frankfort: Ashland (see 859)",KY
+607,"Region: NY
+S Cent. New York: Ithaca, Binghamton; Catskills",NY
+608,"Region: WI
+SW Wisconsin: Madison",WI
+609,"Region: NJ
+S New Jersey: Trenton (see 856)",NJ
+610,"Region: PA
+SE Pennsylvania: Allentown, Bethlehem, Reading, West Chester, Norristown (see overlays 484, 835)",PA
+611,"Region: --
+Reserved for special applications",--
+612,"Region: MN
+Cent. Minnesota: Minneapolis (split from St. Paul, see 651; see splits 763, 952)",MN
+613,"Region: ON
+Canada: SE Ontario: Ottawa (see overlay 343)",ON
+614,"Region: OH
+SE Ohio: Columbus (see overlay 380)",OH
+615,"Region: TN
+Northern Middle Tennessee: Nashville metro area (see 423, 931; see overlay 629, eff 2014)",TN
+616,"Region: MI
+W Michigan: Holland, Grand Haven, Greenville, Grand Rapids, Ionia (see split 269)",MI
+617,"Region: MA
+Massachusetts: greater Boston (see overlay 857)",MA
+618,"Region: IL
+S Illinois: Centralia",IL
+619,"Region: CA
+S California: San Diego (see split 760; overlay 858, 935)",CA
+620,"Region: KS
+S Kansas: Wichita (split from 316; perm 2/3/01)",KS
+623,"Region: AZ
+Arizona: West Phoenix (see 520; also Phoenix split 480, 602)",AZ
+626,"Region: CA
+E S California: Pasadena (split from 818 Los Angeles)",CA
+627,"Region: CA
+No longer in use [was Napa, Sonoma counties (perm 10/13/01, mand 4/13/02); now 707]",CA
+628,"Region: CA
+California: San Francisco County and Marin County on the north side of the Golden Gate Bridge, extending north to Sonoma County (overlaid on 415, eff 2/2015)",CA
+629,"Region: TN
+Northern Middle Tennessee: Nashville metro area (see 423, 931; overlaid on 615, eff 2014)",TN
+630,"Region: IL
+W NE Illinois, western suburbs of Chicago (part of what used to be 708; overlay 331)",IL
+631,"Region: NY
+New York: Suffolk County, Long Island; Huntington, Riverhead (split 516)",NY
+636,"Region: MO
+Missouri: W St. Louis metro area of St. Louis county, St. Charles County, Jefferson County area south (between 314 and 573)",MO
+639,"Region: SK
+Canada: Saskatchewan (overlaid on 306)",SK
+641,"Region: IA
+Iowa: Mason City, Marshalltown, Creston, Ottumwa (split from 515; perm 7/9/00)",IA
+646,"Region: NY
+New York (overlaid on 212, 332, 917) NYC (mostly mobile)",NY
+647,"Region: ON
+Canada: S Cent. Ontario: Toronto (overlaid on 416)",ON
+649,"Region: --
+Turks & Caicos Islands",--
+650,"Region: CA
+California: Peninsula south of San Francisco -- San Mateo County, parts of Santa Clara County (split from 415)",CA
+651,"Region: MN
+Cent. Minnesota: St. Paul (split from Minneapolis, see 612)",MN
+657,"Region: CA
+Northern and western Orange County (overlaid on 714)",CA
+660,"Region: MO
+N Missouri (split from 816)",MO
+661,"Region: CA
+California: N Los Angeles, Mckittrick, Mojave, Newhall, Oildale, Palmdale, Taft, Tehachapi, Bakersfield, Earlimart, Lancaster (split from 805)",CA
+662,"Region: MS
+N Mississippi: Tupelo, Grenada (split from 601)",MS
+664,"Region: --
+Montserrat (split from 809)",--
+667,"Region: MD
+E Maryland: Baltimore, Annapolis, Chesapeake Bay area, Ocean City (overlaid on 410, 443)",MD
+669,"Region: CA
+Cent. Coastal California: San Jose (overlaid on 408; eff 10/20/2012)",CA
+670,"Region: MP
+Commonwealth of the Northern Mariana Islands (CNMI, US Commonwealth)",MP
+671,"Region: GU
+Guam",GU
+678,"Region: GA
+N Georgia: metropolitan Atlanta (overlay; see 404, 770)",GA
+679,"Region: MI
+Michigan: Dearborn area (overlaid on 313; assigned but not in use)",MI
+681,"Region: WV
+West Virginia (overlaid on 304)",WV
+682,"Region: TX
+Texas: Fort Worth areas (perm 10/7/00, mand 12/9/00)",TX
+684,"Region: --
+American Samoa",--
+689,"Region: FL
+Central Florida: Metro Orlando (see overlay 321; overlaid on 407, assigned but not in use)",FL
+700,"Region: --
+Interexchange Carrier Services",--
+701,"Region: ND
+North Dakota",ND
+702,"Region: NV
+S. Nevada: Clark County, incl Las Vegas (overlay 725, eff 6/2014; see also 775)",NV
+703,"Region: VA
+Northern Virginia: Arlington, McLean, Tysons Corner (see split 540; overlay 571)",VA
+704,"Region: NC
+W North Carolina: Charlotte (see split 828, overlay 980)",NC
+705,"Region: ON
+Canada: NE Ontario: Sault Ste. Marie/N Ontario: N Bay, Sudbury",ON
+706,"Region: GA
+N Georgia: Columbus, Augusta (see overlay 762)",GA
+707,"Region: CA
+NW California: Santa Rosa, Napa, Vallejo, American Canyon, Fairfield",CA
+708,"Region: IL
+Illinois: southern and western suburbs of Chicago (see 630; overlay 464)",IL
+709,"Region: NL
+Canada: Newfoundland and Labrador",NL
+710,"Region: --
+US Government",--
+711,"Region: --
+Telecommunications Relay Services",--
+712,"Region: IA
+W Iowa: Council Bluffs",IA
+713,"Region: TX
+Mid SE Texas: central Houston (split 281; overlay 346, 832)",TX
+714,"Region: CA
+Northern and western Orange County (see split 949, overlay 657)",CA
+715,"Region: WI
+N Wisconsin: Eau Claire, Wausau, Superior",WI
+716,"Region: NY
+NW New York: Buffalo (see split 585)",NY
+717,"Region: PA
+E Pennsylvania: Harrisburg (see split 570, overlay 223)",PA
+718,"Region: NY
+New York City, New York (Queens, Staten Island, The Bronx, and Brooklyn; also Marble Hill section of Manhattan; see split 212, 347, 929)",NY
+719,"Region: CO
+SE Colorado: Pueblo, Colorado Springs",CO
+720,"Region: CO
+Central Colorado: Denver (overlaid on 303)",CO
+721,"Region: --
+Sint Maarten (used to be country code +599)",--
+724,"Region: PA
+SW Pennsylvania (areas outside metro Pittsburgh; split from 412)",PA
+725,"Region: NV
+S. Nevada: Clark County, incl Las Vegas (overlaid on 702, eff 6/2014; see also 775)",NV
+727,"Region: FL
+Florida Tampa Metro: Saint Petersburg, Clearwater (Pinellas and parts of Pasco County; split from 813)",FL
+731,"Region: TN
+W Tennessee: outside Memphis metro area (split from 901, perm 2/12/01, mand 9/17/01)",TN
+732,"Region: NJ
+Cent. New Jersey: Toms River, New Brunswick, Bound Brook (see overlay 848)",NJ
+734,"Region: MI
+SE Michigan: west and south of Detroit -- Ann Arbor, Monroe (split from 313)",MI
+737,"Region: TX
+S Texas: Austin (overlaid on 512, suspended; see also 361)",TX
+740,"Region: OH
+SE and Central Ohio (outside Columbus; split from 614; overlay 220)",OH
+743,"Region: NC
+Cent. North Carolina: Greensboro, Winston-Salem, High Point (overlaid on 336)",NC
+747,"Region: CA
+S California: Los Angeles, Agoura Hills, Calabasas, Hidden Hills, and Westlake Village (see 818; implementation suspended)",CA
+754,"Region: FL
+Florida: Broward County area, incl Ft. Lauderdale (overlaid on 954; perm 8/1/01, mand 9/1/01)",FL
+757,"Region: VA
+E Virginia: Tidewater / Hampton Roads area -- Norfolk, Virginia Beach, Chesapeake, Portsmouth, Hampton, Newport News, Suffolk (part of what used to be 804)",VA
+758,"Region: --
+St. Lucia (split from 809)",--
+760,"Region: CA
+California: San Diego North County to Sierra Nevada (split from 619; see overlay 442)",CA
+762,"Region: GA
+N Georgia: Columbus, Augusta (overlaid on 706)",GA
+763,"Region: MN
+Minnesota: Minneapolis NW (split from 612; see also 952)",MN
+764,"Region: CA
+(overlay on 650; SUSPENDED)",CA
+765,"Region: IN
+Indiana: outside Indianapolis (split from 317)",IN
+767,"Region: --
+Dominica (split from 809)",--
+769,"Region: MS
+Mississippi: Meridian, Jackson area (overlaid on 601; perm 7/19/04, mand 3/14/05)",MS
+770,"Region: GA
+Georgia: Atlanta suburbs: outside of I-285 ring road (part of what used to be 404; see also overlay 678)",GA
+772,"Region: FL
+S. Central Florida: St. Lucie, Martin, and Indian River counties (split from 561; eff 2/11/02; mand 11/11/02)",FL
+773,"Region: IL
+Illinois: city of Chicago, outside the loop (see 312; overlay 872)",IL
+774,"Region: MA
+Cent. Massachusetts: Framingham; Cape Cod (see split 978, overlaid on 508, eff 4/2/01)",MA
+775,"Region: NV
+N. Nevada: Reno (all of NV except Clark County area; see 702)",NV
+778,"Region: BC
+Canada: British Columbia: Greater Vancouver (overlaid on 604, per 11/3/01; see also 250)",BC
+779,"Region: IL
+NW Illinois: Rockford, Kankakee (overlaid on 815; eff 8/19/06, mand 2/17/07)",IL
+780,"Region: AB
+Canada: Northern Alberta, north of Lacombe (see 403, 587, 825)",AB
+781,"Region: MA
+Massachusetts: Boston surburbs, to the north and west (see splits 617, 508; overlay 339)",MA
+782,"Region: NS
+Nova Scotia & Prince Edward Island (to be overlaid on 902, eff 11/30/14)",NS
+784,"Region: --
+St. Vincent & Grenadines (split from 809)",--
+785,"Region: KS
+N & W Kansas: Topeka (split from 913)",KS
+786,"Region: FL
+SE Florida, Monroe County (Miami; overlaid on 305)",FL
+787,"Region: PR
+Puerto Rico (see overlay 939, perm 8/1/01)",PR
+800,"Region: --
+US/Canada toll free (see 888, 877, 866, 855, 844, 833, 822)",--
+801,"Region: UT
+Utah: Salt Lake City Metro (see split 385, eff 3/30/02; see also split 435)",UT
+802,"Region: VT
+Vermont",VT
+803,"Region: SC
+South Carolina: Columbia, Aiken, Sumter (see 843, 864)",SC
+804,"Region: VA
+E Virginia: Richmond (see splits 757, 434)",VA
+805,"Region: CA
+S Cent. and Cent. Coastal California: Ventura County, Santa Barbara County: San Luis Obispo, Thousand Oaks, Carpinteria, Santa Barbara, Santa Maria, Lompoc, Santa Ynez Valley / Solvang (see 661 split)",CA
+806,"Region: TX
+Panhandle Texas: Amarillo, Lubbock",TX
+807,"Region: ON
+Canada: W Ontario: Thunder Bay region to Manitoba border",ON
+808,"Region: HI
+Hawaii",HI
+809,"Region: --
+Dominican Republic (see splits 264, 268, 284, 340, 441, 473, 664, 758, 767, 784, 868, 876; overlay 829)",--
+810,"Region: MI
+E Michigan: Flint, Pontiac (see 248; split 586)",MI
+811,"Region: --
+Reserved for special applications",--
+812,"Region: IN
+S Indiana: Evansville, Cincinnati outskirts in IN, Columbus, Bloomington (mostly GMT-5)",IN
+813,"Region: FL
+SW Florida: Tampa Metro (splits 727 St. Petersburg, Clearwater, and 941 Sarasota)",FL
+814,"Region: PA
+Cent. Pennsylvania: Erie",PA
+815,"Region: IL
+NW Illinois: Rockford, Kankakee (see overlay 779; eff 8/19/06, mand 2/17/07)",IL
+816,"Region: MO
+N Missouri: Kansas City (see split 660, overlay 975)",MO
+817,"Region: TX
+N Cent. Texas: Fort Worth area (see 254, 940)",TX
+818,"Region: CA
+S California: Los Angeles: San Fernando Valley (see 213, 310, 562, 626, 747)",CA
+819,"Region: QC
+NW Quebec: Trois Rivieres, Sherbrooke, Outaouais (Gatineau, Hull), and the Laurentians (up to St Jovite / Tremblant) (see split 867; see overlay 873)",QC
+822,"Region: --
+US/Canada toll free (proposed, may not be in use yet)",--
+825,"Region: AB
+Alberta (overlay; see 403, 587, 780)",AB
+828,"Region: NC
+W North Carolina: Asheville (split from 704)",NC
+829,"Region: --
+Dominican Republic (perm 1/31/05; mand 8/1/05; overlaid on 809)",--
+830,"Region: TX
+Texas: region surrounding San Antonio (split from 210)",TX
+831,"Region: CA
+California: central coast area from Santa Cruz through Monterey County",CA
+832,"Region: TX
+Texas: Houston (overlay 713, 281, 346)",TX
+833,"Region: --
+US/Canada toll free (proposed, may not be in use yet)",--
+835,"Region: PA
+SE Pennsylvania: Allentown, Bethlehem, Reading, West Chester, Norristown (overlaid on 610, eff 5/1/01; see also 484)",PA
+843,"Region: SC
+South Carolina, coastal area: Charleston, Beaufort, Myrtle Beach (split from 803)",SC
+844,"Region: --
+US/Canada toll free (proposed, may not be in use yet)",--
+845,"Region: NY
+New York: Poughkeepsie; Nyack, Nanuet, Valley Cottage, New City, Putnam, Dutchess, Rockland, Orange, Ulster and parts of Sullivan counties in New York's lower Hudson Valley and Delaware County in the Catskills (see 914; perm 6/5/00)",NY
+847,"Region: IL
+Northern NE Illinois: northwestern suburbs of chicago (Evanston, Waukegan, Northbrook; see overlay 224)",IL
+848,"Region: NJ
+Cent. New Jersey: Toms River, New Brunswick, Bound Brook (see overlay 732)",NJ
+849,"Region: --
+Dominican Republic: Santo Domingo",--
+850,"Region: FL
+Florida panhandle, from east of Tallahassee to Pensacola (split from 904); western panhandle (Pensacola, Panama City) are UTC-6",FL
+855,"Region: --
+US/Canada toll free",--
+856,"Region: NJ
+SW New Jersey: greater Camden area, Mt Laurel (split from 609)",NJ
+857,"Region: MA
+Massachusetts: greater Boston (overlaid on 617, eff 4/2/01)",MA
+858,"Region: CA
+S California: San Diego (see split 760; overlay 619, 935)",CA
+859,"Region: KY
+N and Central Kentucky: Lexington; suburban KY counties of Cincinnati OH metro area; Covington, Newport, Ft. Thomas, Ft. Wright, Florence (split from 606)",KY
+860,"Region: CT
+Connecticut: areas outside of Fairfield and New Haven Counties (split from 203, overlay 959)",CT
+862,"Region: NJ
+N New Jersey: Newark Paterson Morristown (overlaid on 973)",NJ
+863,"Region: FL
+Florida: Lakeland, Polk County (split from 941)",FL
+864,"Region: SC
+South Carolina, upstate area: Greenville, Spartanburg (split from 803)",SC
+865,"Region: TN
+E Tennessee: Knoxville, Knox and adjacent counties (split from 423; part of what used to be 615)",TN
+866,"Region: --
+US/Canada toll free",--
+867,"Region: YT
+Canada: Yukon, Northwest Territories, Nunavut (split from 403/819)",YT
+868,"Region: --
+Trinidad and Tobago (""new"" -- see 809)",--
+869,"Region: --
+St. Kitts & Nevis",--
+870,"Region: AR
+Arkansas: areas outside of west/central AR: Jonesboro, etc",AR
+872,"Region: IL
+Illinois: Chicago (downtown only -- in the loop; see 773; overlaid on 312 and 773)",IL
+873,"Region: QC
+NW Quebec: Trois Rivieres, Sherbrooke, Outaouais (Gatineau, Hull), and the Laurentians (up to St Jovite / Tremblant) (overlaid on 819)",QC
+876,"Region: --
+Jamaica (split from 809)",--
+877,"Region: --
+US/Canada toll free",--
+878,"Region: PA
+Pittsburgh, New Castle (overlaid on 412, perm 8/17/01, mand t.b.a.)",PA
+880,"Region: --
+Paid Toll-Free Service",--
+881,"Region: --
+Paid Toll-Free Service",--
+882,"Region: --
+Paid Toll-Free Service",--
+888,"Region: --
+US/Canada toll free",--
+898,"Region: --
+VoIP service",--
+900,"Region: --
+US toll calls -- prices vary with the number called",--
+901,"Region: TN
+W Tennessee: Memphis metro area (see 615, 931, split 731)",TN
+902,"Region: NS
+Canada: Nova Scotia, Prince Edward Island (see overlay 782)",NS
+903,"Region: TX
+NE Texas: Tyler (see overlay 430, eff 7/20/02)",TX
+904,"Region: FL
+N Florida: Jacksonville (see splits 352, 386, 850)",FL
+905,"Region: ON
+Canada: S Cent. Ontario: Greater Toronto Area -- Durham, Halton, Hamilton-Wentworth, Niagara, Peel, York, and southern Simcoe County (excluding Toronto -- see overlay 289, 365, splits 416, 647)",ON
+906,"Region: MI
+Upper Peninsula Michigan: Sault Ste. Marie, Escanaba, Marquette (UTC-6 towards the WI border)",MI
+907,"Region: AK
+Alaska",AK
+908,"Region: NJ
+Cent. New Jersey: Elizabeth, Basking Ridge, Somerville, Bridgewater, Bound Brook",NJ
+909,"Region: CA
+California: Inland empire: San Bernardino (see split 951), Riverside",CA
+910,"Region: NC
+S Cent. North Carolina: Fayetteville, Wilmington (see 336)",NC
+911,"Region: --
+Emergency",--
+912,"Region: GA
+SE Georgia: Savannah (see splits 229, 478)",GA
+913,"Region: KS
+Kansas: Kansas City area (see 785)",KS
+914,"Region: NY
+S New York: Westchester County (see 845)",NY
+915,"Region: TX
+W Texas: El Paso (see splits 325 eff 4/5/03; 432, eff 4/5/03)",TX
+916,"Region: CA
+NE California: Sacramento, Walnut Grove, Lincoln, Newcastle and El Dorado Hills (split to 530)",CA
+917,"Region: NY
+New York: New York City (cellular, see 646)",NY
+918,"Region: OK
+E Oklahoma: Tulsa (see overlay 539)",OK
+919,"Region: NC
+E North Carolina: Raleigh (see split 252, overlay 984)",NC
+920,"Region: WI
+NE Wisconsin: Appleton, Green Bay, Sheboygan, Fond du Lac (from Beaver Dam NE to Oshkosh, Appleton, and Door County; part of what used to be 414)",WI
+925,"Region: CA
+California: Contra Costa area: Antioch, Concord, Pleasanton, Walnut Creek (split from 510)",CA
+927,"Region: FL
+Florida: Cellular coverage in Orlando area",FL
+928,"Region: AZ
+Central and Northern Arizona: Prescott, Flagstaff, Yuma (split from 520)",AZ
+929,"Region: NY
+New York City, New York (Queens, Staten Island, The Bronx, and Brooklyn; also Marble Hill section of Manhattan; see split 212, 347, 718)",NY
+931,"Region: TN
+Middle Tennessee: semi-circular ring around Nashville (split from 615)",TN
+935,"Region: CA
+S California: San Diego (see split 760; overlay 858, 619; assigned but not in use)",CA
+936,"Region: TX
+SE Texas: Conroe, Lufkin, Nacogdoches, Crockett (split from 409, see also 979)",TX
+937,"Region: OH
+SW Ohio: Dayton (part of what used to be 513)",OH
+939,"Region: PR
+Puerto Rico (overlaid on 787, perm 8/1/01)",PR
+940,"Region: TX
+N Cent. Texas: Denton, Wichita Falls (split from 254, 817)",TX
+941,"Region: FL
+SW Florida: Sarasota and Manatee counties (part of what used to be 813; see split 863)",FL
+947,"Region: MI
+Michigan: Oakland County (overlays 248, perm 5/5/01)",MI
+949,"Region: CA
+California: S Coastal Orange County (split from 714)",CA
+951,"Region: CA
+California: W Riverside County (split from 909; eff 7/17/04)",CA
+952,"Region: MN
+Minnesota: Minneapolis SW, Bloomington (split from 612; see also 763)",MN
+954,"Region: FL
+Florida: Broward County area, incl Ft. Lauderdale (part of what used to be 305, see overlay 754)",FL
+956,"Region: TX
+Texas: Valley of Texas area; Harlingen, Laredo (split from 210)",TX
+957,"Region: NM
+New Mexico (pending; region unknown)",NM
+959,"Region: CT
+Connecticut: Hartford, New London (postponed; was overlaid on 860 perm 1/6/01; mand 3/1/01???)",CT
+970,"Region: CO
+N and W Colorado (part of what used to be 303)",CO
+971,"Region: OR
+Oregon:  Metropolitan Portland, Salem/Keizer area, incl Cricket Wireless (see 503; perm 10/1/00)",OR
+972,"Region: TX
+Texas: Dallas Metro (overlays 214/469)",TX
+973,"Region: NJ
+N New Jersey: Newark, Paterson, Morristown (see overlay 862; split from 201)",NJ
+975,"Region: MO
+N Missouri: Kansas City (overlaid on 816)",MO
+976,"Region: --
+Unassigned",--
+978,"Region: MA
+Massachusetts: north of Boston to NH (see split 978 -- this is the northern half of old 508; see overlay 351)",MA
+979,"Region: TX
+SE Texas: Bryan, College Station, Bay City (split from 409, see also 936)",TX
+980,"Region: NC
+North Carolina: (overlay on 704; perm 5/1/00, mand 3/15/01)",NC
+984,"Region: NC
+E North Carolina: Raleigh (overlaid on 919, perm 8/1/01, mand 2/5/02 POSTPONED)",NC
+985,"Region: LA
+E Louisiana: SE/N shore of Lake Pontchartrain: Hammond, Slidell, Covington, Amite, Kentwood, area SW of New Orleans, Houma, Thibodaux, Morgan City (split from 504; perm 2/12/01; mand 10/22/01)",LA
+989,"Region: MI
+Upper central Michigan: Mt Pleasant, Saginaw (split from 517; perm 4/7/01)",MI
+999,"Region: --
+Often used by carriers to indicate that the area code information is unavailable for CNID, even though the rest of the number is present",--
