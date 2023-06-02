@@ -45,9 +45,14 @@ def count_404(start, end):
         type = "tz"
 
     for area_code in area_codes:
+        # remove later--just for testing
+        if area_code == 204 or area_code == "204":
+            break
+        
         try:
             url = start + area_code + end
-            r = requests.get(url)
+            # doesn't solve the problem
+            r = requests.get(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"})
             # status code should be either 404 or 200; something else would be unexpected
             if r.status_code == 404:
                 num404 += 1
@@ -58,7 +63,7 @@ def count_404(start, end):
                 print("Unexpected status code: " + str(r.status_code))
                 unexpected_status_codes.append(f"{area_code} raised error {str(r.status_code)} with url {url}")
         except Exception as e:
-            # tz doesn't seem to let me save images
+            # tz doesn't seem to let me save images--gives 403
             print("Exception raised: " + str(e))
 
     return num404, num200
