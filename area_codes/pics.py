@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
+import urllib.request
 
 area_codes_url = 'https://www.bennetyee.org/ucsd-pages/area.html'
 html_text = requests.get(area_codes_url).text
@@ -30,11 +31,18 @@ url_ending = ".png"
 
 unexpected_status_codes = []
 
+
 def count_404(start, end):
     print("beginning to test url: " + start + "..." + end)
 
     num404 = 0
     num200 = 0
+
+    # for naming images stored locally to reflect their source
+    if "usa" in start:
+        type = "usa"
+    else:
+        type = "tz"
 
     for area_code in area_codes:
         try:
@@ -45,6 +53,7 @@ def count_404(start, end):
                 num404 += 1
             elif r.status_code == 200:
                 num200 += 1
+                urllib.request.urlretrieve(url, "pics/" + type + area_code + ".png")
             else:
                 print("Unexpected status code: " + str(r.status_code))
                 unexpected_status_codes.append(f"{area_code} raised error {str(r.status_code)} with url {url}")
