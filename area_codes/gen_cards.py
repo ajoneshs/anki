@@ -25,7 +25,7 @@ for row in table.find_all('tr')[1:]:
     descriptions.append(description)
 
 # generate csv file to import into Anki
-with open('data/area_code_cards.csv', 'w') as f:
+with open('data/area_code_cards.csv', 'w', newline='') as f:
     writer = csv.writer(f)
 
     field = ["front", "back", "tag"]
