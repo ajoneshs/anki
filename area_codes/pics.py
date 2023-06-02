@@ -51,10 +51,6 @@ def save_imgs(start, end):
         type = "tz"
 
     for area_code in area_codes:
-        # remove later--just for testing
-        if area_code == 204 or area_code == '204':
-            break
-
         try:
             url = start + area_code + end
             r = requests.get(url)
