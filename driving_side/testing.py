@@ -26,6 +26,11 @@ for row in table.find_all('tr')[1:]:
     side = cells[1].text.strip()
     abc = ['RHT', 'LHT']
     if side[0:3] not in abc:
+        print('------------------------------')
+        print("Error found")
+        print(f"country: {country}")
+        print(f"lht or rht: {side}")
+        print('------------------------------')
         continue
 
     countries.append(country)
@@ -33,6 +38,7 @@ for row in table.find_all('tr')[1:]:
 
 print(sides)
 print(len(sides))
+print(countries)
 
 '''
 
