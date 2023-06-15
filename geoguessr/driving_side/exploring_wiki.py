@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import csv
 
 driving_side_url = 'https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic'
 html_text = requests.get(driving_side_url).text
@@ -17,3 +18,16 @@ for row in rows:
     data.append([ele for ele in cols if ele])
 
 print(data)
+
+with open('wiki_table.csv', 'w', newline='', encoding="utf-8") as f:
+    writer = csv.writer(f)
+    row_num = 0
+    for row in data:
+        row_num += 1
+        writer.writerow(row)
+
+        # to make sure I haven't missed any countries with weird results
+        # points me to CSV row numbers
+        if len(row) > 1 and len(row[1]) >= 3:
+            if row[1][1:3] != 'HT':
+                print(row_num)
