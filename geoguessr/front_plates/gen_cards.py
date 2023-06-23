@@ -2,9 +2,9 @@ import csv
 
 data = open('data/data.txt', 'r').read().splitlines()
 
-front = data[1]
-rear = data[3]
-most = data[5]
+front = data[1].split(', ')
+rear = data[3].split(', ')
+most = data[5].split(', ')
 
 
 '''
