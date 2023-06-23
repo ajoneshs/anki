@@ -55,5 +55,5 @@ abbrev = {
     "Northern Mariana Islands": "MP",
     "Puerto Rico": "PR",
     "United States Minor Outlying Islands": "UM",
-    "U.S. Virgin Islands": "VI",
+    "Virgin Islands": "VI",
 }
