@@ -1,0 +1,56 @@
+American Samoa,yes,Geo::Country::US::AS Geo::Front_Plates::yes
+California,yes,Geo::Country::US::CA Geo::Front_Plates::yes
+Colorado,yes,Geo::Country::US::CO Geo::Front_Plates::yes
+Connecticut,yes,Geo::Country::US::CT Geo::Front_Plates::yes
+District of Columbia,yes,Geo::Country::US::DC Geo::Front_Plates::yes
+Guam,yes,Geo::Country::US::GU Geo::Front_Plates::yes
+Hawaii,yes,Geo::Country::US::HI Geo::Front_Plates::yes
+Idaho,yes,Geo::Country::US::ID Geo::Front_Plates::yes
+Illinois,yes,Geo::Country::US::IL Geo::Front_Plates::yes
+Iowa,yes,Geo::Country::US::IA Geo::Front_Plates::yes
+Maine,yes,Geo::Country::US::ME Geo::Front_Plates::yes
+Maryland,yes,Geo::Country::US::MD Geo::Front_Plates::yes
+Minnesota,yes,Geo::Country::US::MN Geo::Front_Plates::yes
+Missouri,yes,Geo::Country::US::MO Geo::Front_Plates::yes
+New Hampshire,yes,Geo::Country::US::NH Geo::Front_Plates::yes
+New Jersey,yes,Geo::Country::US::NJ Geo::Front_Plates::yes
+New York,yes,Geo::Country::US::NY Geo::Front_Plates::yes
+North Dakota,yes,Geo::Country::US::ND Geo::Front_Plates::yes
+Northern Mariana Islands,yes,Geo::Country::US::MP Geo::Front_Plates::yes
+Oregon,yes,Geo::Country::US::OR Geo::Front_Plates::yes
+Rhode Island,yes,Geo::Country::US::RI Geo::Front_Plates::yes
+Texas,yes,Geo::Country::US::TX Geo::Front_Plates::yes
+Utah,yes,Geo::Country::US::UT Geo::Front_Plates::yes
+Vermont,yes,Geo::Country::US::VT Geo::Front_Plates::yes
+Virgin Islands,yes,Geo::Country::US::VI Geo::Front_Plates::yes
+Virginia,yes,Geo::Country::US::VA Geo::Front_Plates::yes
+Washington,yes,Geo::Country::US::WA Geo::Front_Plates::yes
+Wisconsin,yes,Geo::Country::US::WI Geo::Front_Plates::yes
+Alabama,no,Geo::Country::US::AL Geo::Front_Plates::no
+Alaska,no,Geo::Country::US::AK Geo::Front_Plates::no
+Arizona,no,Geo::Country::US::AZ Geo::Front_Plates::no
+Arkansas,no,Geo::Country::US::AR Geo::Front_Plates::no
+Delaware,no,Geo::Country::US::DE Geo::Front_Plates::no
+Florida,no,Geo::Country::US::FL Geo::Front_Plates::no
+Georgia,no,Geo::Country::US::GA Geo::Front_Plates::no
+Indiana,no,Geo::Country::US::IN Geo::Front_Plates::no
+Kansas,no,Geo::Country::US::KS Geo::Front_Plates::no
+Kentucky,no,Geo::Country::US::KY Geo::Front_Plates::no
+Louisiana,no,Geo::Country::US::LA Geo::Front_Plates::no
+Michigan,no,Geo::Country::US::MI Geo::Front_Plates::no
+Mississippi,no,Geo::Country::US::MS Geo::Front_Plates::no
+New Mexico,no,Geo::Country::US::NM Geo::Front_Plates::no
+North Carolina,no,Geo::Country::US::NC Geo::Front_Plates::no
+Ohio,no,Geo::Country::US::OH Geo::Front_Plates::no
+Oklahoma,no,Geo::Country::US::OK Geo::Front_Plates::no
+Pennsylvania,no,Geo::Country::US::PA Geo::Front_Plates::no
+Puerto Rico,no,Geo::Country::US::PR Geo::Front_Plates::no
+South Carolina,no,Geo::Country::US::SC Geo::Front_Plates::no
+Tennessee,no,Geo::Country::US::TN Geo::Front_Plates::no
+West Virginia,no,Geo::Country::US::WV Geo::Front_Plates::no
+Massachusetts,mostly,Geo::Country::US::MA Geo::Front_Plates::mostly
+Montana,mostly,Geo::Country::US::MT Geo::Front_Plates::mostly
+Nebraska,mostly,Geo::Country::US::NE Geo::Front_Plates::mostly
+Nevada,mostly,Geo::Country::US::NV Geo::Front_Plates::mostly
+South Dakota,mostly,Geo::Country::US::SD Geo::Front_Plates::mostly
+Wyoming,mostly,Geo::Country::US::WY Geo::Front_Plates::mostly
