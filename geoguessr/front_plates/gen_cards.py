@@ -17,9 +17,9 @@ def add_to_master(state_list, req):
         master.append([state, req, tags])
 
 
-add_to_master(both, 'front and rear')
-add_to_master(rear_only, 'only rear')
-add_to_master(most_both, 'typically front and rear')
+add_to_master(both, 'yes')
+add_to_master(rear_only, 'no')
+add_to_master(most_both, 'mostly')
 
 with open('data/front_plates_cards.csv', 'w', newline='') as f:
     writer = csv.writer(f)
