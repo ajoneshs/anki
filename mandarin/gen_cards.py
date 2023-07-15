@@ -1,3 +1,6 @@
+# automatically add handwritten image for writing cards
+# maybe use https://github.com/chanind/hanzi-writer
+
 import csv
 
 count = 0
