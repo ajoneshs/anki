@@ -1,5 +1,6 @@
 # automatically add handwritten image for writing cards
 # maybe use https://github.com/chanind/hanzi-writer
+# https://commons.wikimedia.org/wiki/Commons:Stroke_Order_Project might also be useful
 
 import csv
 
