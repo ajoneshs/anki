@@ -30,7 +30,10 @@ while True:
     # maybe this: https://pypi.org/project/pinyin/
     pinyin = #
     print(f"Is the following pinyin correct: {pinyin}")
-    pinyin = input(pinyin)
+    print("y if correct, otherwise paste correct pinyin: ")
+    response = input(pinyin)
+    if response != 'y':
+        pinyin = response
 
     print("Add more cards? y/n")
     if input() == "n":
