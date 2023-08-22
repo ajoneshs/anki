@@ -27,6 +27,7 @@ while True:
     trad_ch = #convert here
 
     # attempt to auto generate pinyin
+    # maybe this: https://pypi.org/project/pinyin/
     pinyin = #
     print(f"Is the following pinyin correct: {pinyin}")
     pinyin = input(pinyin)
