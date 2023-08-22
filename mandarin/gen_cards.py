@@ -18,13 +18,29 @@ while True:
     count += 1
     if count == 1:
         print("Welcome, would you like to add cards? y/n")
-    else:
-        print("Add more cards? y/n")
     
+    print("Enter character(s): ")
+    ch = input()
+    print(f"input is: {ch}")
+    # do some checking to make sure input is using simplified characters
+    ch = ch.strip()
+    trad_ch = #convert here
+
+    # attempt to auto generate pinyin
+    pinyin = #
+    print(f"Is the following pinyin correct: {pinyin}")
+    pinyin = input(pinyin)
+
+    print("Add more cards? y/n")
     if input() == "n":
         break
     else: 
         row = create_new_row()
         cards.append(row)
+    
+    # end loop here if user is done adding cards
+    print("Add more cards? y/n")
+    if input() == "n":
+        break
 
 print(cards)
