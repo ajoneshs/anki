@@ -3,6 +3,9 @@
 # https://commons.wikimedia.org/wiki/Commons:Stroke_Order_Project might also be useful
 
 import csv
+import opencc
+
+converter = opencc.OpenCC('s2t.json')
 
 count = 0
 cards = []
@@ -22,10 +25,11 @@ while True:
     print("Enter character(s): ")
     ch = input()
     print(f"input is: {ch}")
+    #
     # do some checking to make sure input is using simplified characters
+    #
     ch = ch.strip()
-    trad_ch = #convert here
-    # maybe use this: https://github.com/BYVoid/OpenCC
+    trad_ch = converter.convert(ch)
 
     # attempt to auto generate pinyin
     # maybe this: https://pypi.org/project/pinyin/
