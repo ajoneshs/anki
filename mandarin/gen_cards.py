@@ -37,7 +37,7 @@ while True:
     # get pinyin
     # standard pinyin form, i.e. 'nǐ hǎo'
     pin = pinyin.get(si, delimiter=" ")
-    print(f"Is the following pinyin correct: \n{pinyin}")
+    print(f"Is the following pinyin correct: \n{pin}")
     print("y if correct, otherwise paste correct pinyin: ")
     response = input()
     if response != 'y':
