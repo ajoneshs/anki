@@ -61,6 +61,10 @@ while True:
     stroke_order = ""
 
 
+    ##### Meaning #####
+    # Try using cedict meaning and give user option to override this (like with pinyin)
+
+
     ##### Tags #####
     # for words, tag with component characters
     # for characters, tag with character itself
