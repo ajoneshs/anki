@@ -25,6 +25,7 @@ while True:
     # do some checking to make sure input is using simplified characters
     ch = ch.strip()
     trad_ch = #convert here
+    # maybe use this: https://github.com/BYVoid/OpenCC
 
     # attempt to auto generate pinyin
     # maybe this: https://pypi.org/project/pinyin/
