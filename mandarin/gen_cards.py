@@ -16,6 +16,8 @@ To-Do
 * maybe add additional meaning field for short definition (i.e. what is memorized rather than the longer auto-generated cedict translation)
     * if I add this, add it after auto generating definition
     * maybe auto generate the short definition somehow using cedict
+    * in anki, show quick definition by default and then show longer definition at bottom of card
+    * https://www.reddit.com/r/Anki/comments/lk4kfr/how_do_i_display_a_field_in_anki_only_if_another/
 '''
 
 
