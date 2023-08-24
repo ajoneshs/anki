@@ -60,18 +60,28 @@ while True:
         print("Enter your own meaning: ")
         meaning = input()
     
-    # literal meaning
-    print("Add literal meaning? y/n")
-    if input() != 'y':
-        print("Input literal meaning: ")
-        lit_meaning = input()
-    else:
-        lit_meaning = ''
+    # optional fields
+    lit_meaning = ''
+    hint = ''
+    examples = ''
+
+    print("Use optional fields? y/n")
+    if input() == 'y':
+        print("Add literal meaning? y/n")
+        if input() == 'y':
+            print("Input literal meaning: ")
+            lit_meaning = input()
+        print("Add hint? y/n")
+        if input() == 'y':
+            print("Input hint: ")
+            hint = input()
+        print("Add examples? y/n")
+        if input() == 'y':
+            print("Input examples: ")
+            examples = input()
+    
 
     ###### Placeholders ######
-    lit_meaning = ""
-    hint = ""
-    examples = ""
     stroke_order = ""
 
 
