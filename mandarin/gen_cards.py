@@ -14,6 +14,8 @@ To-Do
         * i.e. print(f"Traditional character(s) found: {tr}") at initial get character step after user provides simplified character(s)
 * add checking system to make sure user gives simplified character
 * maybe add additional meaning field for short definition (i.e. what is memorized rather than the longer auto-generated cedict translation)
+    * if I add this, add it after auto generating definition
+    * maybe auto generate the short definition somehow using cedict
 '''
 
 
