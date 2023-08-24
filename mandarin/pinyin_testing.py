@@ -20,3 +20,7 @@ print(type(non_existent_def))
 print("---------------")
 shui = '水'
 print(pinyin.cedict.translate_word(shui))
+
+print("--------------")
+print(pinyin.get_initial(shui))
+# doesn't seem to do what I want
