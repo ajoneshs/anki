@@ -5,6 +5,7 @@
 import csv
 import opencc
 import pinyin
+import pinyin.cedict
 
 converter = opencc.OpenCC('s2t.json')
 
