@@ -55,6 +55,7 @@ while True:
     
     # character/word meaning
     meaning = pinyin.cedict.translate_word(si)
+    meaning = '; '.join(meaning)
     print(f"Auto-generated meaning is: {meaning}")
     (print("Keep? y/n"))
     if input() != 'y':
