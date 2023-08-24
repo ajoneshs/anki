@@ -16,3 +16,7 @@ print(pinyin.cedict.translate_word('随机胡言乱语'))
 non_existent_def = pinyin.cedict.translate_word('随机胡言乱语')
 print(non_existent_def)
 print(type(non_existent_def))
+
+print("---------------")
+shui = '水'
+print(pinyin.cedict.translate_word(shui))
