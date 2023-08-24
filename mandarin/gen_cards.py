@@ -52,9 +52,23 @@ while True:
         pin_num = pinyin.get(si, format="numerical", delimiter=" ")
         pin_toneless = pinyin.get(si, format="strip", delimiter=" ")
     
+    # character/word meaning
+    meaning = pinyin.cedict.translate_word(si)
+    print(f"Auto-generated meaning is: {meaning}")
+    (print("Keep? y/n"))
+    if input() != 'y':
+        print("Enter your own meaning: ")
+        meaning = input()
+    
+    # literal meaning
+    print("Add literal meaning? y/n")
+    if input() != 'y':
+        print("Input literal meaning: ")
+        lit_meaning = input()
+    else:
+        lit_meaning = ''
 
     ###### Placeholders ######
-    meaning = ""
     lit_meaning = ""
     hint = ""
     examples = ""
