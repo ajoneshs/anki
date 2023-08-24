@@ -2,6 +2,13 @@
 # maybe use https://github.com/chanind/hanzi-writer
 # https://commons.wikimedia.org/wiki/Commons:Stroke_Order_Project might also be useful
 
+
+####### Audio #######
+# Look into adding audio
+#########################
+#########################
+
+
 import csv
 import opencc
 import pinyin
@@ -10,6 +17,37 @@ import pinyin.cedict
 converter = opencc.OpenCC('s2t.json')
 
 cards = []
+
+##### Tags #####
+# for words, tag with component characters
+# for characters, tag with character itself
+# tag with pinyin syllables (for just characters?? or words too?)
+#tags = [chars_si, chars_tr, syllables, tones, tr_exists]
+
+'''
+tag setup
+Mandarin
+    Characters
+        Simplified
+        Traditional
+    Pinyin
+        Syllables
+            Standard
+            Numerical
+            Toneless
+        Tones
+            1
+            2
+            3
+            4
+            5
+'''
+pre_ch_si = 'Mandarin::Characters::Simplified::'
+pre_ch_tr = 'Mandarin::Characters::Traditional::'
+pre_pin_syl_std = 'Mandarin::Pinyin::Syllables::Standard::'
+pre_pin_syl_num = 'Mandarin::Pinyin::Syllables::Numerical::'
+pre_pin_syl_raw = 'Mandarin::Pinyin::Syllables::Toneless::'
+pre_pin_syl_tone = 'Mandarin::Pinyin::Tones::'
 
 
 # not sure what this was about
@@ -20,20 +58,30 @@ def create_new_row():
 
 
 while True:
+    # clear tags (initialize on first run)
+    tags = set()
+
     # get character
     print("Enter character(s): ")
     ch = input()
     print(f"input is: \n{ch}")
     ch = ch.strip()
     #
-    #
     # do some checking to make sure input is using simplified characters
+    #
     si = ch
     tr = converter.convert(si)
-    tr_exists = "Yes"
+    # add simplified characters to list to tags
+    for char in si:
+        tags.add(pre_ch_si + char)
+    # does traditional version exist? if so add tags
     if tr == si:
         tr = ""
         tr_exists = "No"
+    else:
+        tr_exists = "Yes"
+        for char in tr:
+            tags.add(pre_ch_tr + char)
 
     # get pinyin
     # standard pinyin form, i.e. 'nǐ hǎo'
@@ -52,6 +100,17 @@ while True:
     else:
         pin_num = pinyin.get(si, format="numerical", delimiter=" ")
         pin_toneless = pinyin.get(si, format="strip", delimiter=" ")
+    # add tags for pinyin syllables
+    for syl in pin.split():
+        tags.add(pre_pin_syl_std + syl)
+    for syl in pin_num.split():
+        tags.add(pre_pin_syl_num + syl)
+    for syl in pin_toneless.split():
+        tags.add(pre_pin_syl_raw + syl)
+    # add tags for tones
+    for char in pin_num:
+        if char.isnumeric():
+            tags.add(pre_pin_syl_tone + char)
     
     # character/word meaning
     meaning = pinyin.cedict.translate_word(si)
@@ -87,17 +146,12 @@ while True:
     stroke_order = ""
 
 
-    ##### Meaning #####
-    # Try using cedict meaning and give user option to override this (like with pinyin)
 
-
-    ##### Tags #####
-    # for words, tag with component characters
-    # for characters, tag with character itself
-    # tag with pinyin syllables (for just characters?? or words too?)
+    # consolidate tags into string
+    tags = ' '.join(tags)
 
     # add current card to list of cards
-    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, meaning, lit_meaning, hint, examples, stroke_order]
+    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, meaning, lit_meaning, hint, examples, stroke_order, tags]
     cards.append(row)
 
     # Clearing variable values
