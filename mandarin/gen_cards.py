@@ -3,6 +3,21 @@
 # https://commons.wikimedia.org/wiki/Commons:Stroke_Order_Project might also be useful
 
 
+'''
+To-Do
+* figure out source for stroke order
+* consider adding audio
+    * find source for audio
+* improve formatting
+    * i.e. add '--------' or similar between sections
+    * add notes about what is being auto generated to make it more readily apparent if there is an error that needs to be manually corrected
+        * i.e. print(f"Traditional character(s) found: {tr}") at initial get character step after user provides simplified character(s)
+* add checking system to make sure user gives simplified character
+* maybe add additional meaning field for short definition (i.e. what is memorized rather than the longer auto-generated cedict translation)
+'''
+
+
+
 ####### Audio #######
 # Look into adding audio
 #########################
