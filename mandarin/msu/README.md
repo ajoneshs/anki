@@ -1,1 +1,1 @@
-id.json comes from https://github.com/MatthewScholefield/mandarin-sound-table/blob/master/src/pinyins.json
+pinyin_ids.json comes from https://github.com/MatthewScholefield/mandarin-sound-table/blob/master/src/pinyins.json
