@@ -20,6 +20,8 @@ To-Do
     * https://www.reddit.com/r/Anki/comments/lk4kfr/how_do_i_display_a_field_in_anki_only_if_another/
 * for audio, use MSU tone library for single syllables (i.e. single characters), find some other source for words when multiple syllables are needed
     * probably some text-to-speech model?
+    * keep log of audio files already collected and sent to collections.media
+    * maybe a .txt file in this dir that this file will check to see if the audio file has already been downloaded for another card
 '''
 
 
@@ -34,7 +36,13 @@ import csv
 import opencc
 import pinyin
 import pinyin.cedict
+import json
 
+# for getting from pinyin syllable to MSU tone ID number (for adding audio files)
+f = open('pinyin_ids.json')
+pinyin_ids = json.load(f)
+
+# for converting simplified to traditional characters
 converter = opencc.OpenCC('s2t.json')
 
 cards = []
