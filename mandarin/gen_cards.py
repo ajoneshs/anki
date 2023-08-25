@@ -18,6 +18,8 @@ To-Do
     * maybe auto generate the short definition somehow using cedict
     * in anki, show quick definition by default and then show longer definition at bottom of card
     * https://www.reddit.com/r/Anki/comments/lk4kfr/how_do_i_display_a_field_in_anki_only_if_another/
+* for audio, use MSU tone library for single syllables (i.e. single characters), find some other source for words when multiple syllables are needed
+    * probably some text-to-speech model?
 '''
 
 
