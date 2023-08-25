@@ -21,6 +21,8 @@ downloaded_audio = requests.get(url1)
 with open(f'audio/{id}.mp3', 'wb') as f:
     f.write(downloaded_audio.content)
 
+# shouldn't it be possible to access this file without having to change the directory??
+# removing `os.chdir('audio')` and changing `playsound(f'{id}.mp3')` to `playsound(f'audio/{id}.mp3')` doesn't work, but why?
 os.chdir('audio')
 print(os.getcwd())
 
