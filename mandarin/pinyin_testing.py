@@ -28,4 +28,4 @@ print(pinyin.get_initial(shui))
 
 print("--------------")
 
-print(PinyinToneConverter().convert_text("lù"))
+print(PinyinToneConverter().convert_text("lu4"))
