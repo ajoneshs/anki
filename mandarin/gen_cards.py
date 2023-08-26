@@ -70,6 +70,9 @@ Mandarin
             3
             4
             5
+    Type
+        Character
+        Word/Phrase
 '''
 pre_ch_si = 'Mandarin::Characters::Simplified::'
 pre_ch_tr = 'Mandarin::Characters::Traditional::'
@@ -77,6 +80,8 @@ pre_pin_syl_std = 'Mandarin::Pinyin::Syllables::Standard::'
 pre_pin_syl_num = 'Mandarin::Pinyin::Syllables::Numerical::'
 pre_pin_syl_raw = 'Mandarin::Pinyin::Syllables::Toneless::'
 pre_pin_syl_tone = 'Mandarin::Pinyin::Tones::'
+tag_type_char = 'Mandarin::Type::Character'
+tag_type_word = 'Mandarin::Type::Word/Phrase'
 
 
 # not sure what this was about
@@ -111,6 +116,11 @@ while True:
         tr_exists = "Yes"
         for char in tr:
             tags.add(pre_ch_tr + char)
+    # add tag for if it's a character or word
+    if len(si) > 1:
+        tags.add(tag_type_word)
+    else:
+        tags.add(tag_type_char)
 
     # get pinyin
     # standard pinyin form, i.e. 'nǐ hǎo'
