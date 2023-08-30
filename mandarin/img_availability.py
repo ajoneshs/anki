@@ -41,3 +41,11 @@ print(f"404: {num_404}")
 percent = num_200 / (num_other + num_200) * 100
 
 print(f"Percent returning 200: {percent}%")
+
+'''
+With URL template: https://commons.wikimedia.org/wiki/File:{char}-bw.png
+Status codes
+200: 738
+404: 262
+Percent returning 200: 73.8%
+'''
