@@ -5,6 +5,8 @@ import csv
 # CSV header
 # frequency_rank,charcter,pinyin,definition,radical,radical_code,stroke_count,hsk_level,general_standard_num
 
+# check http://www.strokeorder.info/mandarin.php?q={char} next
+
 num_200 = 0
 num_other = 0
 num_404 = 0
