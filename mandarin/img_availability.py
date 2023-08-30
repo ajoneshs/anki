@@ -2,6 +2,9 @@
 import requests
 import csv
 
+# CSV header
+# frequency_rank,charcter,pinyin,definition,radical,radical_code,stroke_count,hsk_level,general_standard_num
+
 row_num = 0
 with open('hanziDB.csv', encoding='utf-8') as hanzifile:
     hanzireader = csv.reader(hanzifile, delimiter=',')
