@@ -26,6 +26,7 @@ To-Do
     * probably some text-to-speech model?
     * keep log of audio files already collected and sent to collections.media
     * maybe a .txt file in this dir that this file will check to see if the audio file has already been downloaded for another card
+* add version number tag
 '''
 
 
@@ -77,6 +78,7 @@ Mandarin
     Type
         Character
         Word/Phrase
+TAG WITH VERSION NUMBER
 '''
 pre_ch_si = 'Mandarin::Characters::Simplified::'
 pre_ch_tr = 'Mandarin::Characters::Traditional::'
