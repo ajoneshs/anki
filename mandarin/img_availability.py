@@ -8,6 +8,11 @@ import csv
 # check http://www.strokeorder.info/mandarin.php?q={char} next
 # maybe http://www.chinesehideout.com/tools/strokeorder.php?c={char}
 
+# makemeahanzi seems like the best option
+# Anki won't loop animated SVGs though so I would have to use the still SVGs
+# supposedly has simplified and traditional
+# https://github.com/skishore/makemeahanzi
+
 num_200 = 0
 num_other = 0
 num_404 = 0
