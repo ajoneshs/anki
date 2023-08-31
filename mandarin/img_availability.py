@@ -13,6 +13,9 @@ import csv
 # supposedly has simplified and traditional
 # https://github.com/skishore/makemeahanzi
 
+# https://github.com/nmarley/chinese-char-animations might work
+# has gifs of simplified and traditional characters
+
 num_200 = 0
 num_other = 0
 num_404 = 0
