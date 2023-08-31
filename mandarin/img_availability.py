@@ -6,6 +6,7 @@ import csv
 # frequency_rank,charcter,pinyin,definition,radical,radical_code,stroke_count,hsk_level,general_standard_num
 
 # check http://www.strokeorder.info/mandarin.php?q={char} next
+# maybe http://www.chinesehideout.com/tools/strokeorder.php?c={char}
 
 num_200 = 0
 num_other = 0
@@ -46,6 +47,7 @@ print(f"Percent returning 200: {percent}%")
 
 '''
 With URL template: https://commons.wikimedia.org/wiki/File:{char}-bw.png
+For simplified characters
 Status codes
 200: 738
 404: 262
