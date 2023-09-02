@@ -43,7 +43,7 @@ import pinyin
 import pinyin.cedict
 import json
 
-ver_num = 'Version::v0.1'
+ver_num = 'Mandarin::Version::v0.1'
 
 # for getting from pinyin syllable to MSU tone ID number (for adding audio files)
 f = open('pinyin_ids.json')
