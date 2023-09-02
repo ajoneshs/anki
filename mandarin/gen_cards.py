@@ -43,6 +43,8 @@ import pinyin
 import pinyin.cedict
 import json
 
+ver_num = 'v0.1'
+
 # for getting from pinyin syllable to MSU tone ID number (for adding audio files)
 f = open('pinyin_ids.json')
 pinyin_ids = json.load(f)
@@ -100,6 +102,7 @@ def create_new_row():
 while True:
     # clear tags (initialize on first run)
     tags = set()
+    tags.add(ver_num)
 
     # get character
     print("Enter character(s): ")
