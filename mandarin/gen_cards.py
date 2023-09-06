@@ -26,7 +26,6 @@ To-Do
     * probably some text-to-speech model?
     * keep log of audio files already collected and sent to collections.media
     * maybe a .txt file in this dir that this file will check to see if the audio file has already been downloaded for another card
-* add version number tag
 '''
 
 
@@ -199,7 +198,7 @@ while True:
     tags = ' '.join(tags)
 
     # add current card to list of cards
-    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, meaning, lit_meaning, hint, examples, stroke_order, tags]
+    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, meaning, lit_meaning, hint, examples, stroke_order, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, gif_si, gif_tr, tags]
     cards.append(row)
 
     # Clearing variable values
