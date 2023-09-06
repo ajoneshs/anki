@@ -90,6 +90,17 @@ pre_pin_syl_tone = 'Mandarin::Pinyin::Tones::'
 tag_type_char = 'Mandarin::Type::Character'
 tag_type_word = 'Mandarin::Type::Word/Phrase'
 
+'''
+Image setup
+Two sources are:
+gifs: https://github.com/nmarley/chinese-char-animations
+and
+svgs: https://github.com/skishore/makemeahanzi
+
+For the gif link, images are in /images-large
+For the svg link, images are in /svgs-still and /svgs
+'''
+
 
 # not sure what this was about
 def create_new_row():
