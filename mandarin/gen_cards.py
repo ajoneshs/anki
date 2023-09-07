@@ -107,6 +107,8 @@ name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
 
 
 def get_images(zh_input, si_or_tr):
+    img_fields = {'gif': [], 'svg_an': [], 'svg_still': []}
+    
     for char in zh_input:
         ch_dec = ord(char)
         ch_hex = hex(ch_dec)[2:]
@@ -114,14 +116,29 @@ def get_images(zh_input, si_or_tr):
         name_gif = f'imgs/chinese-char-animations-master/images-large/{ch_hex}-large.gif'
         name_svg_an = f'imgs/makemeahanzi-master/svgs/{ch_dec}.svg'
         name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
-        
-        files = [name_gif, name_svg_an, name_svg_still]
-        filename_key = [f'{char}_cca.gif', f'{char}_mmah_an.svg', f'{char}_mmah_still.svg']
-        for index, filename in enumerate(files):
+        og_filenames = {'gif': name_gif, 'svg_an': name_svg_an, 'svg_still': name_svg_still}
+
+        new_filenames = {'gifs': f'{char}_cca.gif', 'svg_an': f'{char}_mmah_an.svg', 'svg_still': f'{char}_mmah_still.svg'}
+
+        for img_type, og_filename in og_filenames.items():
             try:
-                shutil.copy(filename, f'media/{filename_key[index]}')
+                # copy image file from current location to new folder (to be moved to Anki from here)
+                shutil.copy(og_filename, f'media/{new_filenames[img_type]}')
+                # add the image's filename to the Anki field
+                img_fields[img_type].append(f'<img src="{new_filenames[img_type]}">')
             except:
-                print(f"File not found: {filename}")
+                print(f"File not found for {char}: {og_filename}")
+    
+    # formatting filenames for Anki fields
+    for img_type, char_list in img_fields.items():
+        # in case there were missing fields (i.e. for words or phrases)
+        if len(char_list) != len(zh_input):
+            # wipe the whole field since a phrase with a missing character would be confusing
+            img_fields[img_type] = ''
+        else:
+            img_fields[img_type] = ''.join(img_fields[img_type])
+
+    return img_fields['gif'], img_fields['svg_an'], img_fields['svg_still']
 
 
 # not sure what this was about
@@ -203,8 +220,8 @@ while True:
     
     # getting images
     # using function defined outside of loop
-    get_images(si, 'simplified')
-    get_images(tr, 'traditional')
+    gif_si, svg_an_si, svg_still_si = get_images(si, 'simplified')
+    gif_tr, svg_an_tr, svg_still_tr = get_images(tr, 'traditional')
 
     
     # optional fields
@@ -237,7 +254,7 @@ while True:
     tags = ' '.join(tags)
 
     # add current card to list of cards
-    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, meaning, lit_meaning, hint, examples, stroke_order, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, gif_si, gif_tr, tags]
+    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, meaning, lit_meaning, hint, examples, stroke_order, gif_si, gif_tr, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, tags]
     cards.append(row)
 
     # Clearing variable values
