@@ -192,9 +192,10 @@ while True:
             name_svg_an = f'imgs/makemeahanzi-master/svgs/{ch_dec}.svg'
             name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
             files = [name_gif, name_svg_an, name_svg_still]
-            for filename in files:
+            filename_key = [f'{char}_cca.gif', f'{char}_mmah_an.svg', f'{char}_mmah_still.svg']
+            for index, filename in enumerate(files):
                 try:
-                    shutil.copy(filename, 'media')
+                    shutil.copy(filename, f'media/{filename_key[index]}')
                 except:
                     print(f"File not found: {filename}")
     
