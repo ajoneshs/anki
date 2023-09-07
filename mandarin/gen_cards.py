@@ -97,8 +97,10 @@ gifs: https://github.com/nmarley/chinese-char-animations
 and
 svgs: https://github.com/skishore/makemeahanzi
 
-For the gif link, images are in /images-large
-For the svg link, images are in /svgs-still and /svgs
+For the gif link, images are in /images-large and filenames are utf-8 in hexadecimal
+For the svg link, images are in /svgs-still and /svgs and filenames are utf-8 in decimal
+
+Fields: svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, gif_si, gif_tr
 '''
 
 
