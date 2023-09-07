@@ -1,5 +1,5 @@
 area_codes/data/pics/tz/
 area_codes/data/pics/usa/
 geoguessr/front_plates/data/__pycache__/state_abbrev.cpython-39.pyc
-mandarin/imgs/
+mandarin/imgs/*
 !mandarin/imgs/add_image_files_here.md
