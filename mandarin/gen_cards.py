@@ -106,6 +106,7 @@ name_svg_an = f'imgs/makemeahanzi-master/svgs/{ch_dec}.svg'
 name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
 
 
+############ Issue that needs to be fixed here!!!!!!! ###########
 def get_images(zh_input, si_or_tr):
     img_fields = {'gif': [], 'svg_an': [], 'svg_still': []}
     
@@ -126,8 +127,10 @@ def get_images(zh_input, si_or_tr):
                 shutil.copy(og_filename, f'media/{new_filenames[img_type]}')
                 # add the image's filename to the Anki field
                 img_fields[img_type].append(f'<img src="{new_filenames[img_type]}">')
-            except:
+            except Exception as e:
+                # for some reason, it is throwing an exception for gifs
                 print(f"File not found for {char}: {og_filename}")
+                print(f"Error: {e}")
     
     # formatting filenames for Anki fields
     for img_type, char_list in img_fields.items():
