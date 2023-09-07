@@ -92,16 +92,25 @@ tag_type_word = 'Mandarin::Type::Word/Phrase'
 
 '''
 Image setup
-Two sources are:
+
+Fields: svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, gif_si, gif_tr
+
+The two sources are:
 gifs: https://github.com/nmarley/chinese-char-animations
 and
 svgs: https://github.com/skishore/makemeahanzi
 
-For the gif link, images are in /images-large and filenames are utf-8 in hexadecimal
-For the svg link, images are in /svgs-still and /svgs and filenames are utf-8 in decimal
-
-Fields: svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, gif_si, gif_tr
+Filenames
+For the gif link, images are in /images-large and filenames are [utf-8 hexadecimal]-large.gif
+ex: 们 (utf-8: 20204 (decimal), 4eec (hex)) is 4eec-large.gif
+For the svg link, images are in /svgs-still and /svgs and filenames are [utf-8 decimal]-still.svg and [utf-8 decimal].svg respectively
+ex: 20204-still.svg and 20204.svg
 '''
+ch_hex = ''
+ch_dec = ''
+name_gif = f'imgs/chinese-char-animations-master/images-large/{ch_hex}-large.gif'
+name_svg_an = f'imgs/makemeahanzi-master/svgs/{ch_dec}.svg'
+name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
 
 
 # not sure what this was about
