@@ -17,6 +17,7 @@ To-Do
     * probably some text-to-speech model?
     * keep log of audio files already collected and sent to collections.media
     * maybe a .txt file in this dir that this file will check to see if the audio file has already been downloaded for another card
+        * do this for image files too
 '''
 
 
@@ -32,6 +33,7 @@ import opencc
 import pinyin
 import pinyin.cedict
 import json
+import shutil
 
 ver_num = 'Mandarin::Version::v0.1'
 
@@ -181,6 +183,25 @@ while True:
         print("Enter your own meaning: ")
         meaning = input()
     
+    # getting images
+    def get_images(zh_input, si_or_tr):
+        for char in zh_input:
+            ch_dec = ord(char)
+            ch_hex = hex(ch_dec)[2:]
+            name_gif = f'imgs/chinese-char-animations-master/images-large/{ch_hex}-large.gif'
+            name_svg_an = f'imgs/makemeahanzi-master/svgs/{ch_dec}.svg'
+            name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
+            files = [name_gif, name_svg_an, name_svg_still]
+            for filename in files:
+                try:
+                    shutil.copy(filename, 'media')
+                except:
+                    print(f"File not found: {filename}")
+    
+    get_images(si, 'simplified')
+    get_images(tr, 'traditional')
+
+    
     # optional fields
     lit_meaning = ''
     hint = ''
@@ -225,6 +246,8 @@ while True:
     print("Add more cards? y/n")
     if input() == "n":
         break
+
+# write to list of image/audio files already in use on Anki deck here after cards have been successfully created
 
 print(cards)
 
