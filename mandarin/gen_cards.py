@@ -1,12 +1,3 @@
-# automatically add handwritten image for writing cards
-# maybe use https://github.com/chanind/hanzi-writer
-# https://commons.wikimedia.org/wiki/Commons:Stroke_Order_Project might also be useful
-
-# Wikipedia stroke order
-#url_template = f"https://commons.wikimedia.org/wiki/File:{char}-bw.png"
-# doesn't seem to have traditional characters, i.e. nothing for 們
-
-
 '''
 To-Do
 * figure out source for stroke order
