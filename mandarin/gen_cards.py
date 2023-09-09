@@ -156,6 +156,22 @@ def get_images(zh_input):
     return img_fields['gif'], img_fields['svg_an'], img_fields['svg_still']
 
 
+def get_audio(zh_input):
+    # single character
+    if len(zh_input) == 1:
+        # try to get MSU audio
+        # if a non-standard or neutral tone, than use text-to-speech like with word/phrases
+        if zh_input not found in MSU:
+            not_in_MSU = True
+        else:
+            not_in_MSU = False
+    # word/phrase or neutral/non-standard tone 
+    if not_in_MSU == 'not_in_MUS' or len(zh_input) != 1:
+        # text to speech here
+
+    return properly formatted Anki field
+
+
 while True:
     # clear tags (initialize on first run)
     tags = set()
