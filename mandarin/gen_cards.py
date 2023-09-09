@@ -128,7 +128,6 @@ def get_images(zh_input, si_or_tr):
                 # add the image's filename to the Anki field
                 img_fields[img_type].append(f'<img src="{new_filenames[img_type]}">')
             except Exception as e:
-                # for some reason, it is throwing an exception for gifs
                 print(f"File not found for {char}: {og_filename}")
                 print(f"Error: {e}")
     
