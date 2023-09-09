@@ -156,13 +156,6 @@ def get_images(zh_input):
     return img_fields['gif'], img_fields['svg_an'], img_fields['svg_still']
 
 
-# not sure what this was about
-def create_new_row():
-    row = []
-    row = [1, 2, 3]
-    return row
-
-
 while True:
     # clear tags (initialize on first run)
     tags = set()
