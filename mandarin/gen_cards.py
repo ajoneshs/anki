@@ -119,7 +119,7 @@ def get_images(zh_input, si_or_tr):
         name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
         og_filenames = {'gif': name_gif, 'svg_an': name_svg_an, 'svg_still': name_svg_still}
 
-        new_filenames = {'gifs': f'{char}_cca.gif', 'svg_an': f'{char}_mmah_an.svg', 'svg_still': f'{char}_mmah_still.svg'}
+        new_filenames = {'gif': f'{char}_cca.gif', 'svg_an': f'{char}_mmah_an.svg', 'svg_still': f'{char}_mmah_still.svg'}
 
         for img_type, og_filename in og_filenames.items():
             try:
