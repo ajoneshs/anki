@@ -106,24 +106,37 @@ name_svg_an = f'imgs/makemeahanzi-master/svgs/{ch_dec}.svg'
 name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
 
 
-############ Issue that needs to be fixed here!!!!!!! ###########
-def get_images(zh_input, si_or_tr):
+# function to get image files ready for Anki use
+# returns values img fields will be populated with
+def get_images(zh_input):
     img_fields = {'gif': [], 'svg_an': [], 'svg_still': []}
     
     for char in zh_input:
         ch_dec = ord(char)
         ch_hex = hex(ch_dec)[2:]
 
+        # where the files can be found
         name_gif = f'imgs/chinese-char-animations-master/images-large/{ch_hex}-large.gif'
         name_svg_an = f'imgs/makemeahanzi-master/svgs/{ch_dec}.svg'
         name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
-        og_filenames = {'gif': name_gif, 'svg_an': name_svg_an, 'svg_still': name_svg_still}
+        og_filenames = {
+            'gif': name_gif,
+            'svg_an': name_svg_an,
+            'svg_still': name_svg_still
+        }
 
-        new_filenames = {'gif': f'{char}_cca.gif', 'svg_an': f'{char}_mmah_an.svg', 'svg_still': f'{char}_mmah_still.svg'}
+        # cca stands for chinese char animations, mmah stands for make me a hanzi
+        # both are the names of the repos they come from
+        new_filenames = {
+            'gif': f'{char}_cca.gif',
+            'svg_an': f'{char}_mmah_an.svg',
+            'svg_still': f'{char}_mmah_still.svg'
+        }
 
         for img_type, og_filename in og_filenames.items():
             try:
-                # copy image file from current location to new folder (to be moved to Anki from here)
+                # copy image file from current location to media dir with new name 
+                # they will be moved to Anki from the media dir
                 shutil.copy(og_filename, f'media/{new_filenames[img_type]}')
                 # add the image's filename to the Anki field
                 img_fields[img_type].append(f'<img src="{new_filenames[img_type]}">')
