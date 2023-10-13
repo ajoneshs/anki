@@ -34,6 +34,7 @@ import pinyin
 import pinyin.cedict
 import json
 import shutil
+import pyttsx3
 
 ver_num = 'Mandarin::Version::v0.1'
 
@@ -156,6 +157,21 @@ def get_images(zh_input):
     return img_fields['gif'], img_fields['svg_an'], img_fields['svg_still']
 
 
+# setting up text-to-speech
+engine = pyttsx3.init()
+
+# the default voice rate is 200 `engine.getProperty('rate')`
+# this was a bit too fast, so I adjusted it to 135 which seems good so far
+# might want to adjust again in the future
+adjusted_voice_rate = 135
+engine.setProperty('rate', adjusted_voice_rate)
+
+# changing voice to Mandarin-speaking one
+# see full list of voices with `for voice in engine.getProperty('voices'): print(voice)`
+zh_voice_id = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_ZH-CN_HUIHUI_11.0'
+engine.setProperty('voice', zh_voice_id)
+
+# maybe add a tag to card if audio is from MSU or generated with TTS??
 def get_audio(zh_input):
     # single character
     if len(zh_input) == 1:
@@ -166,7 +182,7 @@ def get_audio(zh_input):
         else:
             not_in_MSU = False
     # word/phrase or neutral/non-standard tone 
-    if not_in_MSU == 'not_in_MUS' or len(zh_input) != 1:
+    if not_in_MSU or len(zh_input) != 1:
         # text to speech here
 
     return properly formatted Anki field
