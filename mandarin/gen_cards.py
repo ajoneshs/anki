@@ -263,6 +263,14 @@ while True:
     gif_si, svg_an_si, svg_still_si = get_images(si, 'simplified')
     gif_tr, svg_an_tr, svg_still_tr = get_images(tr, 'traditional')
 
+    # getting audio
+    audio = get_audio(si)
+    # !!!!!to do!!!!!
+    # need to figure out how to add audio file to note
+    # need to add it to `row` below
+    # also figure out order of fields on Anki card, reorder them, and make code here aligns with that
+    # !!!!!to do!!!!!
+
     
     # optional fields
     lit_meaning = ''
@@ -309,7 +317,9 @@ while True:
     if input() == "n":
         break
 
+# !!!!!to do!!!!!
 # write to list of image/audio files already in use on Anki deck here after cards have been successfully created
+# !!!!!to do!!!!!
 
 print(cards)
 
