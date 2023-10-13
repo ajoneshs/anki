@@ -172,18 +172,36 @@ zh_voice_id = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS
 engine.setProperty('voice', zh_voice_id)
 
 # maybe add a tag to card if audio is from MSU or generated with TTS??
-def get_audio(zh_input):
-    # single character
-    if len(zh_input) == 1:
-        # try to get MSU audio
-        # if a non-standard or neutral tone, than use text-to-speech like with word/phrases
-        if zh_input not found in MSU:
-            not_in_MSU = True
+def get_audio(zh_input, pinyin_zh_input):
+    filename = f"{pinyin_zh_input}.mp3"
+    if filename in 'existing_media.txt'.read():
+        # !!!!!to do!!!!!
+        # can I just return filename by itself? 
+        # I think that's what I did for images, but the uncommented note I left below makes me think otherwise
+        # !!!!!to do!!!!!
+        return filename
+    # this whole `else` block is just really awkward
+    else:
+        # single character
+        if len(zh_input) == 1:
+            # try to get MSU audio
+            # if a non-standard or neutral tone, than use text-to-speech like with word/phrases
+            if pinyin_zh_input not in json.loads('pinyin_ids.json'): # this might not work as is !!! haven't tested this line yet !!!
+                # I want to eventually switch away from using pinyin_ids.json since it has some weird properties
+                # not every pinyin has all 6 tone ids in the file which means it would be harder to get audio from specific voice
+                not_in_MSU = True
+            else:
+                not_in_MSU = False
+                get audio from MSU here
+        # the below if-else has incorrect logic, fix later
+        # word/phrase or neutral/non-standard tone 
+        if not_in_MSU or len(zh_input) != 1: # this or statement should be redundant
+            # text to speech here
+        # standard single-syllable character
         else:
-            not_in_MSU = False
-    # word/phrase or neutral/non-standard tone 
-    if not_in_MSU or len(zh_input) != 1:
-        # text to speech here
+            filename = f"{pinyin_zh_input}.mp3"
+            engine.save_to_file(zh_input, filename)
+            engine.runAndWait()
 
     return properly formatted Anki field
 
@@ -264,7 +282,7 @@ while True:
     gif_tr, svg_an_tr, svg_still_tr = get_images(tr, 'traditional')
 
     # getting audio
-    audio = get_audio(si)
+    audio = get_audio(si, pin)
     # !!!!!to do!!!!!
     # need to figure out how to add audio file to note
     # need to add it to `row` below
