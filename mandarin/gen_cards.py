@@ -311,8 +311,6 @@ while True:
             examples = input()
     
 
-    ###### Placeholders ######
-    stroke_order = ""
 
 
 
@@ -320,7 +318,7 @@ while True:
     tags = ' '.join(tags)
 
     # add current card to list of cards
-    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, meaning, lit_meaning, hint, examples, stroke_order, gif_si, gif_tr, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, tags]
+    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, meaning, lit_meaning, hint, examples, gif_si, gif_tr, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, audio, tags]
     cards.append(row)
 
     # Clearing variable values
