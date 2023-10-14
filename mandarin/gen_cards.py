@@ -112,6 +112,9 @@ name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
 # !!!!!to do!!!!!
 # get_images() is not adding img filenames to existing_media.txt
 # figure out why this is
+
+# I think I solved it, check later to make sure
+
 # !!!!!to do!!!!!
 
 
@@ -153,7 +156,7 @@ def get_images(zh_input):
                     # copy image to media dir where it will be held temporarily
                     shutil.copy(og_filename, f'media/{new_filename}')
                     # add it to the list of media already on Anki
-                    with open("existing_media.txt", "a") as f:
+                    with open("existing_media.txt", "a", encoding="utf-8") as f:
                         f.write(new_filename + '\n')
                 # add the image's filename to the Anki field
                 img_fields[img_type].append(f'<img src="{new_filename}">')
