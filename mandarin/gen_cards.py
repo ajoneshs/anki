@@ -326,11 +326,8 @@ while True:
     cards.append(row)
 
     # Clearing variable values
-    # var names come from fields for Anki note:
-    # field = ["Simplified", "Traditional", "Pinyin", "Pinyin (numerical)", "Pinyin (toneless)", "Meaning", "Literal meaning", "Is there traditional?", "Hint", "Examples", "Stroke order"]
-    all_vars = [si, tr, tr_exists, pin, pin_num, pin_toneless, meaning, lit_meaning, hint, examples, stroke_order]
-    for i in range(len(all_vars)):
-        all_vars[i] = ""
+    for i in range(len(row)):
+        row[i] = ""
 
     # end loop here if user is done adding cards
     print("Add more cards? y/n")
