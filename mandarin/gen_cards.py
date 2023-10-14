@@ -35,6 +35,7 @@ import pinyin.cedict
 import json
 import shutil
 import pyttsx3
+import requests
 
 ver_num = 'Mandarin::Version::v0.1'
 
@@ -178,6 +179,7 @@ engine.setProperty('rate', adjusted_voice_rate)
 zh_voice_id = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_ZH-CN_HUIHUI_11.0'
 engine.setProperty('voice', zh_voice_id)
 
+
 # maybe add a tag to card if audio is from MSU or generated with TTS??
 def get_audio(zh_input, pinyin_zh_input):
     filename = f"{pinyin_zh_input}.mp3"
@@ -186,9 +188,19 @@ def get_audio(zh_input, pinyin_zh_input):
         return filename
     # if this is a new file, find/generate it, add it to media folder, and add to existing_media.txt
     # first try to get audio file from MSU files
-    if pinyin_zh_input in json.loads('pinyin_ids.json'):
-            get MSU tone here
+    pids = json.loads('pinyin_ids.json')
+    if pinyin_zh_input in pids:
             filename = 'msu_' + filename
+            # pinyin_ids.json is imperfect and doesn't have all 6 IDs for every syllable
+            # when all 6 are present, the 4th one is the one I want since I prefer that speaker
+            num_ids = len(pids[pinyin_zh_input])
+            i = min(num_ids, 4)
+            audio_id = pids[pinyin_zh_input][i]
+            url_template = f"https://tone.lib.msu.edu/tone/{audio_id}/PROXY_MP3/download"
+            downloaded_audio = requests.get(url_template)
+            with open(filename, 'wb') as f:
+                f.write(downloaded_audio.content)
+                filename = 'msu_' + filename
     # generate audio using pyttsx3
     else:
         filename = 'tts_' + filename
