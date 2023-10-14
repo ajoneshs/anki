@@ -140,7 +140,7 @@ def get_images(zh_input):
                 # if image has not already been added to Anki,
                 # copy image file from current location to media dir with new name 
                 # they will be moved to Anki from the media dir
-                if new_filename not in 'existing_media.txt'.read():
+                if new_filename not in open('existing_media.txt').read():
                     # copy image to media dir where it will be held temporarily
                     shutil.copy(og_filename, f'media/{new_filename}')
                     # add it to the list of media already on Anki
@@ -182,7 +182,7 @@ engine.setProperty('voice', zh_voice_id)
 def get_audio(zh_input, pinyin_zh_input):
     filename = f"{pinyin_zh_input}.mp3"
     # look to see if the file has previously been added to Anki
-    if filename in 'existing_media.txt'.read():
+    if filename in open('existing_media.txt').read():
         return filename
     # if this is a new file, find/generate it, add it to media folder, and add to existing_media.txt
     # first try to get audio file from MSU files
