@@ -136,11 +136,18 @@ def get_images(zh_input):
 
         for img_type, og_filename in og_filenames.items():
             try:
+                new_filename = f'{new_filenames[img_type]}'
+                # if image has not already been added to Anki,
                 # copy image file from current location to media dir with new name 
                 # they will be moved to Anki from the media dir
-                shutil.copy(og_filename, f'media/{new_filenames[img_type]}')
+                if new_filename not in 'existing_media.txt'.read():
+                    # copy image to media dir where it will be held temporarily
+                    shutil.copy(og_filename, f'media/{new_filename}')
+                    # add it to the list of media already on Anki
+                    with open("existing_media.txt", "a") as f:
+                        f.write(new_filename + '\n')
                 # add the image's filename to the Anki field
-                img_fields[img_type].append(f'<img src="{new_filenames[img_type]}">')
+                img_fields[img_type].append(f'<img src="{new_filename}">')
             except Exception as e:
                 print(f"File not found for {char}: {og_filename}")
                 print(f"Error: {e}")
@@ -174,36 +181,23 @@ engine.setProperty('voice', zh_voice_id)
 # maybe add a tag to card if audio is from MSU or generated with TTS??
 def get_audio(zh_input, pinyin_zh_input):
     filename = f"{pinyin_zh_input}.mp3"
+    # look to see if the file has previously been added to Anki
     if filename in 'existing_media.txt'.read():
-        # !!!!!to do!!!!!
-        # can I just return filename by itself? 
-        # I think that's what I did for images, but the uncommented note I left below makes me think otherwise
-        # !!!!!to do!!!!!
         return filename
-    # this whole `else` block is just really awkward
+    # if this is a new file, find/generate it, add it to media folder, and add to existing_media.txt
+    # first try to get audio file from MSU files
+    if pinyin_zh_input in json.loads('pinyin_ids.json'):
+            get MSU tone here
+            filename = 'msu_' + filename
+    # generate audio using pyttsx3
     else:
-        # single character
-        if len(zh_input) == 1:
-            # try to get MSU audio
-            # if a non-standard or neutral tone, than use text-to-speech like with word/phrases
-            if pinyin_zh_input not in json.loads('pinyin_ids.json'): # this might not work as is !!! haven't tested this line yet !!!
-                # I want to eventually switch away from using pinyin_ids.json since it has some weird properties
-                # not every pinyin has all 6 tone ids in the file which means it would be harder to get audio from specific voice
-                not_in_MSU = True
-            else:
-                not_in_MSU = False
-                get audio from MSU here
-        # the below if-else has incorrect logic, fix later
-        # word/phrase or neutral/non-standard tone 
-        if not_in_MSU or len(zh_input) != 1: # this or statement should be redundant
-            # text to speech here
-        # standard single-syllable character
-        else:
-            filename = f"{pinyin_zh_input}.mp3"
-            engine.save_to_file(zh_input, filename)
-            engine.runAndWait()
-
-    return properly formatted Anki field
+        filename = 'tts_' + filename
+        engine.save_to_file(zh_input, filename)
+        engine.runAndWait()
+    # add filename to existing_media.txt
+    with open("existing_media.txt", "a") as f:
+        f.write(filename + '\n')
+    return filename
 
 
 while True:
@@ -285,8 +279,6 @@ while True:
     audio = get_audio(si, pin)
     # !!!!!to do!!!!!
     # need to figure out how to add audio file to note
-    # need to add it to `row` below
-    # also figure out order of fields on Anki card, reorder them, and make code here aligns with that
     # !!!!!to do!!!!!
 
     
