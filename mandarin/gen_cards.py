@@ -188,7 +188,9 @@ def get_audio(zh_input, pinyin_zh_input):
         return filename
     # if this is a new file, find/generate it, add it to media folder, and add to existing_media.txt
     # first try to get audio file from MSU files
-    pids = json.loads('pinyin_ids.json')
+    f = open('pinyin_ids.json')
+    pids = json.load(f)
+    f.close()
     if pinyin_zh_input in pids:
             filename = 'msu_' + filename
             # pinyin_ids.json is imperfect and doesn't have all 6 IDs for every syllable
@@ -198,16 +200,15 @@ def get_audio(zh_input, pinyin_zh_input):
             audio_id = pids[pinyin_zh_input][i]
             url_template = f"https://tone.lib.msu.edu/tone/{audio_id}/PROXY_MP3/download"
             downloaded_audio = requests.get(url_template)
-            with open(filename, 'wb') as f:
+            with open('media/' + filename, 'wb') as f:
                 f.write(downloaded_audio.content)
-                filename = 'msu_' + filename
     # generate audio using pyttsx3
     else:
         filename = 'tts_' + filename
-        engine.save_to_file(zh_input, filename)
+        engine.save_to_file(zh_input, 'media/' + filename)
         engine.runAndWait()
     # add filename to existing_media.txt
-    with open("existing_media.txt", "a") as f:
+    with open("existing_media.txt", "a", encoding="utf-8") as f:
         f.write(filename + '\n')
     return filename
 
