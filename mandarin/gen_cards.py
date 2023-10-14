@@ -200,7 +200,7 @@ engine.setProperty('voice', zh_voice_id)
 
 # maybe add a tag to card if audio is from MSU or generated with TTS??
 def get_audio(zh_input, pinyin_zh_input):
-    filename = f"{pinyin_zh_input}.mp3"
+    filename = f"{pinyin_zh_input.replace(' ', '_')}.mp3"
     # look to see if the file has previously been added to Anki
     if filename in open('existing_media.txt').read():
         return filename
