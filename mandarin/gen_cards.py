@@ -284,8 +284,8 @@ while True:
     
     # getting images
     # using function defined outside of loop
-    gif_si, svg_an_si, svg_still_si = get_images(si, 'simplified')
-    gif_tr, svg_an_tr, svg_still_tr = get_images(tr, 'traditional')
+    gif_si, svg_an_si, svg_still_si = get_images(si)
+    gif_tr, svg_an_tr, svg_still_tr = get_images(tr)
 
     # getting audio
     audio = get_audio(si, pin)
