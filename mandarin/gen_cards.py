@@ -326,6 +326,12 @@ while True:
     row = [si, tr, tr_exists, pin, pin_num, pin_toneless, meaning, lit_meaning, hint, examples, gif_si, gif_tr, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, audio, tags]
     cards.append(row)
 
+
+
+    print(1)
+    print(cards)
+    print(2)
+
     # Clearing variable values
     for i in range(len(row)):
         row[i] = ""
@@ -339,6 +345,10 @@ while True:
 # write to list of image/audio files already in use on Anki deck here after cards have been successfully created
 # !!!!!to do!!!!!
 
+
+# !!!!!to do!!!!!
+# figure out why this prints an empty list??
+# !!!!!to do!!!!!
 print(cards)
 
 
