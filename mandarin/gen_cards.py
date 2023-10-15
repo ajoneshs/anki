@@ -203,7 +203,7 @@ def get_audio(zh_input, pinyin_zh_input):
     filename = f"{pinyin_zh_input.replace(' ', '_')}.mp3"
     # look to see if the file has previously been added to Anki
     if filename in open('existing_media.txt').read():
-        return filename
+        return f"[sound:{filename}]"
     # if this is a new file, find/generate it, add it to media folder, and add to existing_media.txt
     # first try to get audio file from MSU files
     f = open('pinyin_ids.json')
@@ -228,7 +228,7 @@ def get_audio(zh_input, pinyin_zh_input):
     # add filename to existing_media.txt
     with open("existing_media.txt", "a", encoding="utf-8") as f:
         f.write(filename + '\n')
-    return filename
+    return f"[sound:{filename}]"
 
 
 while True:
@@ -293,13 +293,13 @@ while True:
             tags.add(pre_pin_syl_tone + char)
     
     # character/word meaning
-    meaning = pinyin.cedict.translate_word(si)
-    meaning = '; '.join(meaning)
-    print(f"Auto-generated meaning is: {meaning}")
+    full_def = pinyin.cedict.translate_word(si)
+    full_def = '; '.join(full_def)
+    print(f"Auto-generated full definition is: {full_def}")
     (print("Keep? y/n"))
     if input() != 'y':
-        print("Enter your own meaning: ")
-        meaning = input()
+        print("Enter your own full definition: ")
+        full_def = input()
     
     # getting images
     # using function defined outside of loop
@@ -346,7 +346,7 @@ while True:
     tags = ' '.join(tags)
 
     # add current card to list of cards
-    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, meaning, lit_meaning, hint, examples, gif_si, gif_tr, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, audio, tags]
+    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, full_def, quick_def, lit_meaning, hint, examples, gif_si, gif_tr, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, audio, tags]
     cards.append(row)
 
 
