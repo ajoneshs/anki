@@ -213,6 +213,22 @@ def get_audio(zh_input, pinyin_zh_input):
     return f"[sound:{filename}]"
 
 
+# for getting from pinyin with tone marks to pinyin with numbers
+# adapted from https://stackoverflow.com/questions/42854588/get-tone-number-from-pinyin
+def to_tone_number(s):
+    table = {0x304: ord('1'), 0x301: ord('2'), 0x30c: ord('3'),
+         0x300: ord('4')}
+    og_return = unicodedata.normalize('NFD', s).translate(table)
+    temp = [*og_return]
+    for index, char in enumerate(temp):
+        if str(char).isnumeric():
+            num = temp.pop(int(index))
+            break
+    temp.append(num)
+    temp = ''.join(temp)
+    return temp
+
+
 while True:
     # clear tags (initialize on first run)
     tags = set()
