@@ -108,17 +108,6 @@ name_svg_an = f'imgs/makemeahanzi-master/svgs/{ch_dec}.svg'
 name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
 
 
-
-# !!!!!to do!!!!!
-# get_images() is not adding img filenames to existing_media.txt
-# figure out why this is
-
-# I think I solved it, check later to make sure
-
-# !!!!!to do!!!!!
-
-
-
 # function to get image files ready for Anki use
 # returns values img fields will be populated with
 def get_images(zh_input):
