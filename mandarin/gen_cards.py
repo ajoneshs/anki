@@ -36,6 +36,7 @@ import json
 import shutil
 import pyttsx3
 import requests
+import unicodedata
 
 ver_num = 'Mandarin::Version::v0.1'
 
@@ -218,16 +219,19 @@ def get_audio(zh_input, pinyin_zh_input):
 def to_tone_number(s):
     table = {0x304: ord('1'), 0x301: ord('2'), 0x30c: ord('3'),
          0x300: ord('4')}
-    og_return = unicodedata.normalize('NFD', s).translate(table)
-    temp = [*og_return]
-    for index, char in enumerate(temp):
-        if str(char).isnumeric():
-            num = temp.pop(int(index))
-            break
-    temp.append(num)
-    temp = ''.join(temp)
-    return temp
-
+    pin_split = pin.split(' ')
+    for i, pin_syl in enumerate(pin_split):
+        og_return = unicodedata.normalize('NFD', pin_syl).translate(table)
+        temp = [*og_return]
+        for index, char in enumerate(temp):
+            if str(char).isnumeric():
+                num = temp.pop(int(index))
+                break
+        temp.append(num)
+        temp = ''.join(temp)
+        pin_split[i] = temp
+    return ' '.join(pin_split)
+    
 
 while True:
     # clear tags (initialize on first run)
@@ -269,12 +273,12 @@ while True:
     response = input()
     if response != 'y':
         pin = response
-        # have to manually enter numerical and toneless pinyin
-        # eventually automate this
-        print("Input numerical pinyin (i.e. ni3 hao3): ")
-        pin_num = input()
-        print("Input toneless pinyin (i.e. ni hao): ")
-        pin_toneless = input()
+        # getting numerical pinyin using function borrowed from other project
+        pin_num = to_tone_number(pin)
+        print(f"Auto-generated numerical pinyin is: {pin_num}")
+        # removing the numbers from pin_num
+        pin_toneless = ''.join([i for i in pin_num if not i.isnumeric()])
+        print(f"Auto-generated toneless pinyin is: {pin_toneless}")
     else:
         pin_num = pinyin.get(si, format="numerical", delimiter=" ")
         pin_toneless = pinyin.get(si, format="strip", delimiter=" ")
