@@ -180,13 +180,6 @@ zh_voice_id = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS
 engine.setProperty('voice', zh_voice_id)
 
 
-# !!!!!to do!!!!!
-# need to figure out how to to format output; can't just output raw filename
-# see how get_images formats output: f'<img src="{new_filename}">'
-# !!!!!to do!!!!!
-
-
-
 # maybe add a tag to card if audio is from MSU or generated with TTS??
 def get_audio(zh_input, pinyin_zh_input):
     filename = f"{pinyin_zh_input.replace(' ', '_')}.mp3"
