@@ -310,10 +310,6 @@ while True:
 
     # getting audio
     audio = get_audio(si, pin)
-    # !!!!!to do!!!!!
-    # need to figure out how to add audio file to note
-    # !!!!!to do!!!!!
-
     
     # optional fields
     quick_def = ''
@@ -366,13 +362,9 @@ while True:
     if input() == "n":
         break
 
-# !!!!!to do!!!!!
-# write to list of image/audio files already in use on Anki deck here after cards have been successfully created
-# !!!!!to do!!!!!
-
 
 # !!!!!to do!!!!!
-# figure out why this prints an empty list??
+# write to CSV
 # !!!!!to do!!!!!
 print(cards)
 
