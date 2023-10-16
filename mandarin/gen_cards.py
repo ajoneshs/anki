@@ -38,7 +38,11 @@ import pyttsx3
 import requests
 import unicodedata
 
-ver_num = 'Mandarin::Version::v0.1'
+version = 0.1
+ver_num = f'Mandarin::Version::v{version}'
+
+# clearing CSV file at start just in case
+open('cards.csv', 'w').close()
 
 # for getting from pinyin syllable to MSU tone ID number (for adding audio files)
 f = open('pinyin_ids.json')
@@ -142,11 +146,11 @@ def get_images(zh_input):
                 # if image has not already been added to Anki,
                 # copy image file from current location to media dir with new name 
                 # they will be moved to Anki from the media dir
-                if new_filename not in open('existing_media.txt').read():
+                if new_filename not in open('existing_media.txt', encoding='UTF-8').read():
                     # copy image to media dir where it will be held temporarily
                     shutil.copy(og_filename, f'media/{new_filename}')
                     # add it to the list of media already on Anki
-                    with open("existing_media.txt", "a", encoding="utf-8") as f:
+                    with open("existing_media.txt", "a", encoding="UTF-8") as f:
                         f.write(new_filename + '\n')
                 # add the image's filename to the Anki field
                 img_fields[img_type].append(f'<img src="{new_filename}">')
@@ -185,7 +189,7 @@ engine.setProperty('voice', zh_voice_id)
 def get_audio(zh_input, pinyin_zh_input):
     filename = f"{pinyin_zh_input.replace(' ', '_')}.mp3"
     # look to see if the file has previously been added to Anki
-    if filename in open('existing_media.txt').read():
+    if filename in open('existing_media.txt', encoding='UTF-8').read():
         return f"[sound:{filename}]"
     # if this is a new file, find/generate it, add it to media folder, and add to existing_media.txt
     # first try to get audio file from MSU files
@@ -209,7 +213,7 @@ def get_audio(zh_input, pinyin_zh_input):
         engine.save_to_file(zh_input, 'media/' + filename)
         engine.runAndWait()
     # add filename to existing_media.txt
-    with open("existing_media.txt", "a", encoding="utf-8") as f:
+    with open("existing_media.txt", "a", encoding="UTF-8") as f:
         f.write(filename + '\n')
     return f"[sound:{filename}]"
 
@@ -345,13 +349,12 @@ while True:
 
     # add current card to list of cards
     row = [si, tr, tr_exists, pin, pin_num, pin_toneless, full_def, quick_def, lit_meaning, hint, examples, gif_si, gif_tr, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, audio, tags]
-    cards.append(row)
-
-
-
-    print(1)
-    print(cards)
-    print(2)
+    
+    # write current row to CSV
+    #, newline=''
+    with open('cards.csv', 'a', encoding='UTF-8') as f:
+        writer = csv.writer(f, delimiter='\t')
+        writer.writerow(row)
 
     # Clearing variable values
     for i in range(len(row)):
@@ -363,10 +366,12 @@ while True:
         break
 
 
+
+
 # !!!!!to do!!!!!
 # write to CSV
 # !!!!!to do!!!!!
-print(cards)
+#print(cards)
 
 
 '''
