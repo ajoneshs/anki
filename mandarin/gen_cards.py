@@ -174,7 +174,7 @@ engine = pyttsx3.init()
 # the default voice rate is 200 `engine.getProperty('rate')`
 # this was a bit too fast, so I adjusted it to 135 which seems good so far
 # might want to adjust again in the future
-adjusted_voice_rate = 135
+adjusted_voice_rate = 115
 engine.setProperty('rate', adjusted_voice_rate)
 
 # changing voice to Mandarin-speaking one
