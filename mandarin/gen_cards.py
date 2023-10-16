@@ -1,10 +1,6 @@
 '''
 To-Do
-* figure out source for stroke order
-* consider adding audio
-    * find source for audio
 * improve formatting
-    * i.e. add '--------' or similar between sections
     * add notes about what is being auto generated to make it more readily apparent if there is an error that needs to be manually corrected
         * i.e. print(f"Traditional character(s) found: {tr}") at initial get character step after user provides simplified character(s)
 * add checking system to make sure user gives simplified character
@@ -13,20 +9,7 @@ To-Do
     * maybe auto generate the short definition somehow using cedict
     * in anki, show quick definition by default and then show longer definition at bottom of card
     * https://www.reddit.com/r/Anki/comments/lk4kfr/how_do_i_display_a_field_in_anki_only_if_another/
-* for audio, use MSU tone library for single syllables (i.e. single characters), find some other source for words when multiple syllables are needed
-    * probably some text-to-speech model?
-    * keep log of audio files already collected and sent to collections.media
-    * maybe a .txt file in this dir that this file will check to see if the audio file has already been downloaded for another card
-        * do this for image files too
 '''
-
-
-
-####### Audio #######
-# Look into adding audio
-#########################
-#########################
-
 
 import csv
 import opencc
@@ -39,7 +22,7 @@ import requests
 import unicodedata
 
 # UPDATE VERSION NUMBER AS YOU MAKE CHANGES
-version = "1.0"
+version = "0.1"
 ver_num = f'Mandarin::Version::v{version}'
 
 # clearing CSV file at start just in case
