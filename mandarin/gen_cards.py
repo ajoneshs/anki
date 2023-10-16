@@ -340,10 +340,6 @@ while True:
         if input() == 'y':
             print("Input examples: ")
             examples = input()
-    
-
-
-
 
     # consolidate tags into string
     tags = ' '.join(tags)
@@ -352,7 +348,6 @@ while True:
     row = [si, tr, tr_exists, pin, pin_num, pin_toneless, full_def, quick_def, lit_meaning, hint, examples, gif_si, gif_tr, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, audio, tags]
     
     # write current row to CSV
-    #, newline=''
     with open('cards.csv', 'a', encoding='UTF-8') as f:
         writer = csv.writer(f, delimiter='\t')
         writer.writerow(row)
@@ -365,39 +360,3 @@ while True:
     print("Add more cards? y/n")
     if input() == "n":
         break
-
-
-'''
-
-# var names come from fields for Anki note:
-# field = ["Simplified", "Traditional", "Is there traditional?", "Pinyin", "Pinyin (numerical)", "Pinyin (toneless)", "Meaning", "Literal meaning", "Hint", "Examples", "Stroke order"]
-all_vars = [si, tr, pin, pin_num, pin_toneless, meaning, lit_meaning, tr_exists, hint, examples, stroke_order]
-
-for i in range(len(all_vars)):
-    all_vars[i] = ""
-
-#
-#
-# from /geoguessr/area_codes/gen_cards.py
-#
-#
-
-# generate csv file to import into Anki
-with open('data/area_code_cards.csv', 'w', newline='') as f:
-    writer = csv.writer(f)
-
-    field = ["Simplified", "Traditional", "Is there traditional?", "Pinyin", "Pinyin (numerical)", "Pinyin (toneless)", "Meaning", "Literal meaning", "Hint", "Examples", "Stroke order"]
-    #writer.writerow(field)
-    
-    for i in range(len(area_codes)):
-        # generating maps field
-        tz_img_exists = area_codes[i] in tz_csv
-        usa_img_exists = area_codes[i] in usa_csv
-        # maybe need to str(area_codes[i])
-        maps_field = (
-            ('<img src="tz' + area_codes[i] + '.png">') * tz_img_exists + '<br>' + 
-            ('<img src="usa' + area_codes[i] + '.png">') * usa_img_exists
-        )
-        writer.writerow([area_codes[i], f"Region: {regions[i]}<br>{descriptions[i]}", maps_field, "AC::" + regions[i]])
-
-'''
