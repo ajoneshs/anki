@@ -322,12 +322,13 @@ while True:
     hint = ''
     examples = ''
 
-    print("Use optional fields? y/n")
+    print("Add quick definition? n/input quick def now")
+    response = input()
+    if response != 'n':
+        quick_def = response
+
+    print("Use other optional fields? y/n")
     if input() == 'y':
-        print("Add quick definition? y/n")
-        if input() == 'y':
-            print("Input quick definition: ")
-            quick_def = input()
         print("Add literal meaning? y/n")
         if input() == 'y':
             print("Input literal meaning: ")
