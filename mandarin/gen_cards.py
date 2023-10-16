@@ -303,12 +303,30 @@ while True:
     
     # character/word meaning
     full_def = pinyin.cedict.translate_word(si)
-    full_def = '; '.join(full_def)
-    print(f"Auto-generated full definition is: {full_def}")
-    (print("Keep? y/n"))
-    if input() != 'y':
-        print("Enter your own full definition: ")
+    # if valid translation is found
+    if type(full_def) == list:
+        quick_def = full_def[0]
+        print(f"Auto-generated FULL definition is: {full_def}")
+        (print("Keep? y/input own full def"))
+        response = input()
+        if response != 'y':
+            full_def = response
+        print(f"Auto-generated QUICK definition is: {quick_def}")
+        (print("Keep? y/input own quick def"))
+        response = input()
+        if response != 'y':
+            quick_def = response
+        
+    # no valid translation is found
+    else:
+        print("No translation found. Enter your own FULL definition: ")
         full_def = input()
+        print("Add QUICK definition? n/input your own")
+        response = input()
+        if response == 'n':
+            quick_def = ''
+        else:
+            quick_def = response
     
     # getting images
     # using function defined outside of loop
@@ -319,17 +337,11 @@ while True:
     audio = get_audio(si, pin)
     
     # optional fields
-    quick_def = ''
     lit_meaning = ''
     hint = ''
     examples = ''
 
-    print("Add quick definition? n/input quick def now")
-    response = input()
-    if response != 'n':
-        quick_def = response
-
-    print("Use other optional fields? y/n")
+    print("Use optional fields? y/n")
     if input() == 'y':
         print("Add literal meaning? y/n")
         if input() == 'y':
