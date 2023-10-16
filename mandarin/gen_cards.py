@@ -38,7 +38,8 @@ import pyttsx3
 import requests
 import unicodedata
 
-version = 0.1
+# UPDATE VERSION NUMBER AS YOU MAKE CHANGES
+version = "1.0"
 ver_num = f'Mandarin::Version::v{version}'
 
 # clearing CSV file at start just in case
@@ -364,14 +365,6 @@ while True:
     print("Add more cards? y/n")
     if input() == "n":
         break
-
-
-
-
-# !!!!!to do!!!!!
-# write to CSV
-# !!!!!to do!!!!!
-#print(cards)
 
 
 '''
