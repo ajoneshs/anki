@@ -256,10 +256,12 @@ while True:
     if tr == si:
         tr = ""
         tr_exists = "No"
+        print("No traditional version found")
     else:
         tr_exists = "Yes"
         for char in tr:
             tags.add(pre_ch_tr + char)
+        print(f"Found traditional version of {si}: {tr}")
     # add tag for if it's a character or word
     if len(si) > 1:
         tags.add(tag_type_word)
