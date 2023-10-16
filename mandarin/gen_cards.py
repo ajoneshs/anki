@@ -102,6 +102,9 @@ name_svg_still = f'imgs/makemeahanzi-master/svgs-still/{ch_dec}-still.svg'
 def get_images(zh_input):
     img_fields = {'gif': [], 'svg_an': [], 'svg_still': []}
     
+    # for error checking
+    total_count = 0
+
     for char in zh_input:
         ch_dec = ord(char)
         ch_hex = hex(ch_dec)[2:]
@@ -124,6 +127,9 @@ def get_images(zh_input):
             'svg_still': f'{char}_mmah_still.svg'
         }
 
+        # counting the number of images found for each char in zh_input
+        count = 0
+
         for img_type, og_filename in og_filenames.items():
             try:
                 new_filename = f'{new_filenames[img_type]}'
@@ -138,10 +144,17 @@ def get_images(zh_input):
                         f.write(new_filename + '\n')
                 # add the image's filename to the Anki field
                 img_fields[img_type].append(f'<img src="{new_filename}">')
+                count += 1
             except Exception as e:
                 print(f"File not found for {char}: {og_filename}")
                 print(f"Error: {e}")
+        total_count += count
     
+    # making sure there are no missing images
+    # there should be 3 images for every character in zh_input
+    if total_count != (len(zh_input*3)):
+        print("*****IMAGES MISSING*****")
+
     # formatting filenames for Anki fields
     for img_type, char_list in img_fields.items():
         # in case there were missing fields (i.e. for words or phrases)
