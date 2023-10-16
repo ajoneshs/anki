@@ -306,6 +306,7 @@ while True:
     # if valid translation is found
     if type(full_def) == list:
         quick_def = full_def[0]
+        full_def = '; '.join(full_def)
         print(f"Auto-generated FULL definition is: {full_def}")
         (print("Keep? y/input own full def"))
         response = input()
