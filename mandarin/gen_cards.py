@@ -20,6 +20,7 @@ import shutil
 import pyttsx3
 import requests
 import unicodedata
+import hanzidentifier
 
 # UPDATE VERSION NUMBER AS YOU MAKE CHANGES
 version = "0.1"
@@ -242,8 +243,11 @@ while True:
     # get character
     print("Enter character(s): ")
     ch = input()
-    print(f"input is: \n{ch}")
     ch = ch.strip()
+    if not hanzidentifier.is_simplified(ch):
+        print(f"Error, {ch} is not a simplified character. Please input simplified character: ")
+        ch = input().strip()
+    print(f"input is: \n{ch}")
     #
     # do some checking to make sure input is using simplified characters
     #
