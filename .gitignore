@@ -4,3 +4,4 @@ geoguessr/front_plates/data/__pycache__/state_abbrev.cpython-39.pyc
 mandarin/imgs/*
 !mandarin/imgs/add_image_files_here.md
 mandarin/media
+mandarin/cards.csv
