@@ -376,3 +376,8 @@ while True:
     print("Add more cards? y/n")
     if input() == "n":
         break
+
+print("---------------------------------------------")
+print("Important reminder: when adding these cards to Anki, you have to manually select the option to use the last CSV field for tags")
+print("---------------------------------------------")
+print(r"Move media files to: C:\Users\senoj\AppData\Roaming\Anki2\User 1\collection.media")
