@@ -23,7 +23,7 @@ import unicodedata
 import hanzidentifier
 
 # UPDATE VERSION NUMBER AS YOU MAKE CHANGES
-version = "1.0"
+version = "1.1"
 ver_num = f'Mandarin::Version::v{version}'
 
 # clearing CSV file at start just in case
@@ -348,6 +348,7 @@ while True:
     
     # optional fields
     lit_meaning = ''
+    notes = ''
     hint = ''
     examples = ''
 
@@ -357,6 +358,10 @@ while True:
         if input() == 'y':
             print("Input literal meaning: ")
             lit_meaning = input()
+        print("Add notes? y/n")
+        if input() == 'y':
+            print("Input notes: ")
+            notes = input()
         print("Add hint? y/n")
         if input() == 'y':
             print("Input hint: ")
@@ -370,7 +375,7 @@ while True:
     tags = ' '.join(tags)
 
     # add current card to list of cards
-    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, full_def, quick_def, lit_meaning, hint, examples, gif_si, gif_tr, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, audio, tags]
+    row = [si, tr, tr_exists, pin, pin_num, pin_toneless, full_def, quick_def, lit_meaning, notes, hint, examples, gif_si, gif_tr, svg_an_si, svg_an_tr, svg_still_si, svg_still_tr, audio, tags]
     
     # write current row to CSV
     with open('cards.csv', 'a', encoding='UTF-8') as f:
