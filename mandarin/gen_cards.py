@@ -23,7 +23,7 @@ import unicodedata
 import hanzidentifier
 
 # UPDATE VERSION NUMBER AS YOU MAKE CHANGES
-version = "0.1"
+version = "1.0"
 ver_num = f'Mandarin::Version::v{version}'
 
 # clearing CSV file at start just in case
