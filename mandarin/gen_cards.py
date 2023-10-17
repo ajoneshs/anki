@@ -137,11 +137,11 @@ def get_images(zh_input):
                 # if image has not already been added to Anki,
                 # copy image file from current location to media dir with new name 
                 # they will be moved to Anki from the media dir
-                if new_filename not in open('existing_media.txt', encoding='UTF-8').read():
+                if new_filename not in open('log.txt', encoding='UTF-8').read():
                     # copy image to media dir where it will be held temporarily
                     shutil.copy(og_filename, f'media/{new_filename}')
                     # add it to the list of media already on Anki
-                    with open("existing_media.txt", "a", encoding="UTF-8") as f:
+                    with open("log.txt", "a", encoding="UTF-8") as f:
                         f.write(new_filename + '\n')
                 # add the image's filename to the Anki field
                 img_fields[img_type].append(f'<img src="{new_filename}">')
@@ -187,9 +187,9 @@ engine.setProperty('voice', zh_voice_id)
 def get_audio(zh_input, pinyin_zh_input):
     filename = f"{pinyin_zh_input.replace(' ', '_')}.mp3"
     # look to see if the file has previously been added to Anki
-    if filename in open('existing_media.txt', encoding='UTF-8').read():
+    if filename in open('log.txt', encoding='UTF-8').read():
         return f"[sound:{filename}]"
-    # if this is a new file, find/generate it, add it to media folder, and add to existing_media.txt
+    # if this is a new file, find/generate it, add it to media folder, and add to log.txt
     # first try to get audio file from MSU files
     f = open('pinyin_ids.json')
     pids = json.load(f)
@@ -210,8 +210,8 @@ def get_audio(zh_input, pinyin_zh_input):
         filename = 'tts_' + filename
         engine.save_to_file(zh_input, 'media/' + filename)
         engine.runAndWait()
-    # add filename to existing_media.txt
-    with open("existing_media.txt", "a", encoding="UTF-8") as f:
+    # add filename to log.txt
+    with open("log.txt", "a", encoding="UTF-8") as f:
         f.write(filename + '\n')
     return f"[sound:{filename}]"
 
@@ -240,17 +240,26 @@ while True:
     tags = set()
     tags.add(ver_num)
 
-    # get character
-    print("Enter character(s): ")
-    ch = input()
-    ch = ch.strip()
-    if not hanzidentifier.is_simplified(ch):
-        print(f"Error, {ch} is not a simplified character. Please input simplified character: ")
-        ch = input().strip()
+    # get character for current card/note
+    while True:
+        print("Enter character(s): ")
+        ch = input()
+        ch = ch.strip()
+        # check to make sure input is simplified
+        if not hanzidentifier.is_simplified(ch):
+            print(f"Error, {ch} is not a simplified character. Please input simplified this time.")
+            continue
+        # check to make sure this is not a duplicate card
+        # this is a sloppy way to do this, but it works
+        if f"*${ch}$*" in open('log.txt', encoding='UTF-8').read():
+            print("Duplicate warning! This card has previously been created. Check Anki to see if it already exists.")
+            print("Keep input anyways? y/n")
+            response = input()
+            if response != 'y':
+                continue
+        break
+
     print(f"input is: \n{ch}")
-    #
-    # do some checking to make sure input is using simplified characters
-    #
     si = ch
     tr = converter.convert(si)
     # add simplified characters to list to tags
@@ -367,6 +376,10 @@ while True:
     with open('cards.csv', 'a', encoding='UTF-8') as f:
         writer = csv.writer(f, delimiter='\t')
         writer.writerow(row)
+    
+    # add current card to log.txt (for preventing duplicate cards)
+    with open("log.txt", "a", encoding="UTF-8") as f:
+        f.write(f"*${ch}$*" + '\n')
 
     # Clearing variable values
     for i in range(len(row)):
