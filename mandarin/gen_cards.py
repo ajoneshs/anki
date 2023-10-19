@@ -12,19 +12,6 @@ TODO
 '''
 
 
-
-# !!!!! TODO !!!!!
-# a couple of cards did not have audio files somehow
-# if this is a recurring issue, check on this
-# both were MSU cards:
-'''
-The following files are referenced by cards, but were not found in the media folder:
-Missing: jǐu.mp3
-Missing: tā.mp3
-'''
-
-
-
 import csv
 import opencc
 import pinyin
@@ -201,8 +188,10 @@ engine.setProperty('voice', zh_voice_id)
 def get_audio(zh_input, pinyin_zh_input):
     filename = f"{pinyin_zh_input.replace(' ', '_')}.mp3"
     # look to see if the file has previously been added to Anki
-    if filename in open('log.txt', encoding='UTF-8').read():
-        return f"[sound:{filename}]"
+    if ('msu_' + filename) in open('log.txt', encoding='UTF-8').read():
+        return f"[sound:{'msu_' + filename}]"
+    if ('tts_' + filename) in open('log.txt', encoding='UTF-8').read():
+        return f"[sound:{'tts_' + filename}]"
     # if this is a new file, find/generate it, add it to media folder, and add to log.txt
     # first try to get audio file from MSU files
     f = open('pinyin_ids.json')
