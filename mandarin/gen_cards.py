@@ -1,5 +1,5 @@
 '''
-To-Do
+TODO
 * improve formatting
     * add notes about what is being auto generated to make it more readily apparent if there is an error that needs to be manually corrected
         * i.e. print(f"Traditional character(s) found: {tr}") at initial get character step after user provides simplified character(s)
@@ -10,6 +10,20 @@ To-Do
     * in anki, show quick definition by default and then show longer definition at bottom of card
     * https://www.reddit.com/r/Anki/comments/lk4kfr/how_do_i_display_a_field_in_anki_only_if_another/
 '''
+
+
+
+# !!!!! TODO !!!!!
+# a couple of cards did not have audio files somehow
+# if this is a recurring issue, check on this
+# both were MSU cards:
+'''
+The following files are referenced by cards, but were not found in the media folder:
+Missing: jǐu.mp3
+Missing: tā.mp3
+'''
+
+
 
 import csv
 import opencc
