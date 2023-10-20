@@ -137,7 +137,7 @@ tts_bō_luó.mp3
 奶_cca.gif
 奶_mmah_an.svg
 奶_mmah_still.svg
-tts_níu_nǎi.mp3
+tts_niú_nǎi.mp3
 *$牛奶$*
 说_mmah_an.svg
 说_mmah_still.svg
