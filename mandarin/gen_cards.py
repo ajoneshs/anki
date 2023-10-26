@@ -228,6 +228,7 @@ def to_tone_number(s):
     for i, pin_syl in enumerate(pin_split):
         og_return = unicodedata.normalize('NFD', pin_syl).translate(table)
         temp = [*og_return]
+        num = '5'
         for index, char in enumerate(temp):
             if str(char).isnumeric():
                 num = temp.pop(int(index))
